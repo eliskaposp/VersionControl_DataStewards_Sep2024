@@ -42,7 +42,7 @@ include_local_figure <- function(data_source) {
 }
 ```
 
-# [Version Control in Science]{.bold .r-fit-text} {.title}
+# [The basics of Version Control]{.bold .r-fit-text} {.title}
 
 Ondřej Mottl
 
@@ -345,11 +345,13 @@ knitr::include_graphics("https://www.sqlshack.com/wp-content/uploads/2020/07/vis
 Make a new project with Git tracking
 :::
 
-`r countdown(minutes = 5)`
+`r countdown(minutes = 3)`
 
 ## Git clone (repo first)
 
 Copy (download) for  [remote repo]{.text-color-highlight-primary} to [local]{.text-color-highlight-secondary} machine
+
+Example of online repo: [OndrejMottl/VersionControl_DataStewards_Sep2024](https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024)
 
 ::::: {.panel-tabset}
 
@@ -680,6 +682,15 @@ knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images
 
 ::::
 
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+::: {.r-fit-text} 
+1. commit some changes
+2. review history
+:::
+
+`r countdown(minutes = 5)`
+
 ## Commit message
 
 Commits are **quick** and **cheap**. Therefore:
@@ -714,15 +725,6 @@ knitr::include_graphics("https://happygitwithr.com/img/commit-diff-sha-tag.png")
 ::: footer
 [Happy Git and GitHub for the useR](https://happygitwithr.com/install-intro)
 :::
-
-## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
-
-::: {.r-fit-text} 
-1. commit some changes
-2. review history
-:::
-
-`r countdown(minutes = 5)`
 
 ## remote
 
@@ -1183,8 +1185,9 @@ In pairs:
 
 :::{.r-fit-text}
 1. Clone someone's else repo
-2. Create a merge conflict 
-3. fix it
+2. Add them as a collaborator
+3. Create a merge conflict 
+4. fix it
 :::
 
 `r countdown(minutes = 3)`
@@ -1345,6 +1348,20 @@ knitr::include_graphics("https://coderefinery.github.io/git-intro/_images/gopher
 
 ::::: {.panel-tabset}
 
+### GH Desktop
+
+:::: columns
+:::{.column width="10%"}
+:::
+
+:::{.column width="60%"}
+```{r}
+#| label: git-make-branch-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp")
+```
+:::
+::::
+
 ### RStudio
 
 :::: columns
@@ -1389,6 +1406,16 @@ knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol
 :::
 ::::
 
+:::::
+
+## Switching between branches (`checkout`)
+
+The default branch is called [main]{.text-color-highlight-secondary} or [master]{.text-color-highlight-secondary}
+
+‼️ Make sure that you have all changes commited before switching ‼️
+
+::::: {.panel-tabset}
+
 ### GH Desktop
 
 :::: columns
@@ -1397,21 +1424,11 @@ knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol
 
 :::{.column width="60%"}
 ```{r}
-#| label: git-make-branch-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp")
+#| label: git-switch-branch-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp")
 ```
 :::
 ::::
-
-:::::
-
-## Switching between branches
-
-The default branch is called [main]{.text-color-highlight-secondary} or [master]{.text-color-highlight-secondary}
-
-! Make sure that you have all changes commited before switching !
-
-::::: {.panel-tabset}
 
 ### RStudio
 
@@ -1453,19 +1470,6 @@ knitr::include_graphics("https://geo-jobe.com/wp-content/uploads/2022/07/Checkou
 :::
 ::::
 
-### GH Desktop
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="60%"}
-```{r}
-#| label: git-switch-branch-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp")
-```
-:::
-::::
 
 :::::
 
@@ -1473,11 +1477,11 @@ knitr::include_graphics("https://docs.github.com/assets/cb-38142/mw-1440/images/
 
 :::{.r-fit-text}
 1. Make a branch and switch
-2. commit chnages
-3. push 
+2. commit changes
+3. push to remote
 :::
 
-`r countdown(minutes = 3)`
+`r countdown(minutes = 5)`
 
 ## Merging branches
 
@@ -1528,7 +1532,7 @@ knitr::include_graphics("https://www.dummies.com/wp-content/uploads/github-open-
 
 ## Pull Request - Overview
 
-Now you can [more commits]{.text-color-highlight-primary}, add [Comment]{.text-color-highlight-secondary} to start discussion, or [merge]{.text-color-highlight-tertiary}
+Now you can [more commits]{.text-color-highlight-primary}, (add [Comment]{.text-color-highlight-secondary} to start discussion), or [merge]{.text-color-highlight-tertiary}
 
 ```{r}
 #| label: git-pull-request-overview
@@ -1538,6 +1542,14 @@ knitr::include_graphics("https://aberdeenstudygroup.github.io/studyGroup/lessons
 ::: footer
 [Aberdeen Study Group](https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/)
 :::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+:::{.r-fit-text}
+1. Create a PR
+:::
+
+`r countdown(minutes = 5)`
 
 ## Note on Markdown
 
@@ -1560,6 +1572,90 @@ include_local_figure("Markdown_syntax.png")
 ::: footer
 [https://arminreiter.com/](https://arminreiter.com/resources/)
 :::
+
+
+## Pull Request - review
+
+A tool to [review]{.text-color-highlight-primary} [suggested]{.text-color-highlight-secondary} changes
+
+```{r}
+#| label: git-pull-request-scheme2
+knitr::include_graphics("https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png")
+```
+
+::: footer
+[https://www.atlassian.com/](https://www.atlassian.com/blog/bitbucket/5-pull-request-must-haves)
+:::
+
+## Collaboration
+
+```{r}
+#| label: GH-team-admin-roles-teaching2
+include_local_figure("FirstPullRequest.jpg")
+```
+
+::: footer
+[This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
+:::
+
+
+## Pull Request - review
+
+On [someone else's PR]{.text-color-highlight-primary}, you can comment on **individual lines** or **whole files**
+
+```{r}
+#| label: git-pull-request-review
+include_local_figure("5_review.png")
+```
+
+## Pull Request - review
+
+```{r}
+#| label: git-pull-request-add-commets
+knitr::include_graphics("https://www.researchgate.net/profile/Yue-Yu-126/publication/321632407/figure/fig1/AS:569701769191424@1512838894719/Example-comments-on-GitHub_W640.jpg")
+```
+
+::: footer
+[What Are They Talking About? Analyzing Code Reviews in Pull-Based Development Model](http://dx.doi.org/10.1007/s11390-017-1783-2)
+:::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+:::{.r-fit-text}
+1. Make a comment on your PR
+2. Make a comment on a file in your PR
+:::
+
+`r countdown(minutes = 5)`
+
+## [Merging branches]{.r-fit-text} {.subtitle .textcenter}
+
+## Merge conflict with branch 💩
+
+Merge conflict with branches is much more pleasant😎
+
+```{r}
+#| label: git-pull-request-review2
+include_local_figure("4_merge_conflict.png")
+```
+
+## Merge conflict with branch 💩
+
+Edit the file as needed
+
+```{r}
+#| label: git-merge-conflic-gh-2
+include_local_figure("5_conflict.png")
+```
+
+## Merge conflict with branch 💩
+
+Commit the changes
+
+```{r}
+#| label: git-merge-conflic-gh-3
+include_local_figure("7_solved.png")
+```
 
 ## Merging strategies
 
@@ -1595,6 +1691,14 @@ knitr::include_graphics("https://lukemerrett.com/content/images/2021/08/c44e8334
 [Luke Merrett](https://lukemerrett.com/different-merge-types-in-git/)
 :::
 
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+:::{.r-fit-text}
+Merge a branch
+:::
+
+`r countdown(minutes = 3)`
+
 ## Delete branch
 
 We can delete branch directly on GitHub after merging
@@ -1613,6 +1717,20 @@ knitr::include_graphics("https://aberdeenstudygroup.github.io/studyGroup/lessons
 We can also delete branch **before** merging
 
 ::::: {.panel-tabset}
+
+### GH Desktop
+
+:::: columns
+:::{.column width="10%"}
+:::
+
+:::{.column width="60%"}
+```{r}
+#| label: git-delete-branch-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-28505/mw-1440/images/help/desktop/delete-branch-win.webp")
+```
+:::
+::::
 
 ### RStudio
 
@@ -1666,86 +1784,12 @@ Open [Command Palette]{.text-color-highlight-secondary} (`Ctrl+Shift+p`)
 
 Select [Git: Delete branch ...]{.text-color-highlight-tertiary}
 
-### GH Desktop
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="60%"}
-```{r}
-#| label: git-delete-branch-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-28505/mw-1440/images/help/desktop/delete-branch-win.webp")
-```
-:::
-::::
-
 :::::
-
-## Pull Request - review
-
-A tool to [review]{.text-color-highlight-primary} [suggested]{.text-color-highlight-secondary} changes
-
-```{r}
-#| label: git-pull-request-scheme2
-knitr::include_graphics("https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png")
-```
-
-::: footer
-[https://www.atlassian.com/](https://www.atlassian.com/blog/bitbucket/5-pull-request-must-haves)
-:::
-
-## Pull Request - review
-
-On [someone else's PR]{.text-color-highlight-primary}, you can comment on **individual lines** or **whole files**
-
-```{r}
-#| label: git-pull-request-review
-include_local_figure("5_review.png")
-```
-
-## Pull Request - review
-
-```{r}
-#| label: git-pull-request-add-commets
-knitr::include_graphics("https://www.researchgate.net/profile/Yue-Yu-126/publication/321632407/figure/fig1/AS:569701769191424@1512838894719/Example-comments-on-GitHub_W640.jpg")
-```
-
-::: footer
-[What Are They Talking About? Analyzing Code Reviews in Pull-Based Development Model](http://dx.doi.org/10.1007/s11390-017-1783-2)
-:::
-
-## Merge conflict with branch 💩
-
-Merge conflict with branches is much more pleasant😎
-
-```{r}
-#| label: git-pull-request-review2
-include_local_figure("4_merge_conflict.png")
-```
-
-## Merge conflict with branch 💩
-
-Edit the file as needed
-
-```{r}
-#| label: git-merge-conflic-gh-2
-include_local_figure("5_conflict.png")
-```
-
-## Merge conflict with branch 💩
-
-Commit the changes
-
-```{r}
-#| label: git-merge-conflic-gh-3
-include_local_figure("7_solved.png")
-```
 
 ## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
 
 :::{.r-fit-text}
-Merge a branch
+Delete a branch
 :::
 
 `r countdown(minutes = 3)`
@@ -1761,8 +1805,32 @@ knitr::include_graphics("https://www.garrickadenbuie.com/blog/pull-request-flow-
 [Pull Request Flow with usethis](https://www.garrickadenbuie.com/blog/pull-request-flow-usethis)
 :::
 
+## This is just a teaser
+
+GitHub has a lot of [features]{.text-color-highlight-primary} and [tools]{.text-color-highlight-secondary} to make your life easier:
+
+* Project management
+* Task management
+* Collaboration
+* Dissimination
+* Automation
+* ...
+
+::: {.fragment}
+Maybe next time😊? 
+:::
 
 # [Outro]{.bold .r-fit-text} {.title}
+
+## [This presentation]{.bold .r-fit-text} {.title}
+
+::: {.r-fit-text}
+[😸 Code on GitHub](https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024)
+
+[🖥️ Slides](https://ondrejmottl.github.io/VersionControl_DataStewards_Sep2024/)
+:::
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## About me
 
@@ -1797,14 +1865,4 @@ Assistant Professor at [Charles University](https://cuni.cz/UK-1.html)
 :::
 
 ::::
-
-## [This presentation]{.bold .r-fit-text} {.title}
-
-::: {.r-fit-text}
-[😸 Code on GitHub](https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024)
-
-[🖥️ Slides](https://ondrejmottl.github.io/VersionControl_DataStewards_Sep2024/)
-:::
-
-
 
