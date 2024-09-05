@@ -9,7 +9,7 @@
 <link href="presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.3.450">
 <title>presentation</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,8 +222,7 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -400,31 +399,31 @@
 <p>10.09.2024</p>
 </section><section id="evolution" class="slide level2"><h2>Evolution</h2>
 
-<img data-src="materials/openresearch.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/openresearch.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
 </div>
-</section></section><section><section id="open-science" class="title-slide slide level1 center"><h1>Open Science</h1>
+</section><section id="open-science" class="slide level2"><h2>Open Science</h2>
 
-<img data-src="materials/UNESCO-Open_science-pillars-en.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/UNESCO-Open_science-pillars-en.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://doi.org/10.54677/UTCD9302">UNESCO (2022). Understanding open science — Factsheet — SC-PBS-STIP/2022/OST/1.</a></p>
 </div>
 </section><section id="a-better-view" class="slide level2"><h2>A better view</h2>
 
-<img data-src="materials/os_taxonomy.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/os_taxonomy.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://www.fosteropenscience.eu/">https://www.fosteropenscience.eu/</a></p>
 </div>
 </section><section id="the-journey" class="slide level2"><h2>The Journey</h2>
 
-<img data-src="materials/ReproducibleJourney.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/ReproducibleJourney.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
 </div>
 </section></section><section><section id="version-control" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">Version control</span></h1>
 
 </section><section id="ring-a-bell" class="slide level2"><h2>Ring a bell ?</h2>
 
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/phd101212s.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="what-is-version-control" class="slide level2"><h2>What is Version Control? 🤔</h2>
+<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/phd101212s.gif" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="what-is-version-control" class="slide level2"><h2>What is Version Control? 🤔</h2>
 
-<img data-src="materials/VersionControl.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="textcenter">
+<img data-src="materials/VersionControl.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="textcenter">
 <p>It is all about <span class="text-color-highlight-primary">keeping track</span> of <span class="text-color-highlight-secondary">changes</span> 📓✍️</p>
 </div>
 <div class="footer">
@@ -432,7 +431,7 @@
 </div>
 </section><section id="practical-exercise" class="slide level2 exercise textcenter"><h2>Practical Exercise</h2>
 <p></p>
-<div class="countdown" id="timer_f76239c4" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<div class="countdown" id="timer_5b776a5d" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
 <button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
 </div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 <div class="columns">
@@ -442,16 +441,15 @@
 <li><em>It broke … hopefully I have a working version somewhere?</em></li>
 <li><em>Can you please send me the latest version?</em></li>
 <li><em>Which version are you using?</em></li>
-<li><em>Found a bug! Since when was it there?</em></li>
 <li><em>I am sure it used to work. When did it change?</em></li>
-<li><em>My laptop is gone. Is my thesis now gone?</em></li>
+<li><em>My laptop is gone. Is my data now gone?</em></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="how-do-you-keep-track-of-changes">How do you keep track of changes?</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://ecorepsci.github.io/reproducible-science/img/version-nightmare.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://ecorepsci.github.io/reproducible-science/img/version-nightmare.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -473,7 +471,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/768px-Git_icon.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/768px-Git_icon.svg.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -490,13 +488,174 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </div>
+</section><section id="gitgithub-setup-aka-git-hell" class="slide level2"><h2>Git/GitHub setup AKA “git hell”</h2>
+
+<img data-src="materials/ErrorManagement.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><p>Follow instructions in <a href="https://ondrejmottl.github.io/VersionControl_gitHell/">Version Control - git hell</a> (a separate presentation).</p>
+<div class="blockquote">
+<p>Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle … <strong>Brace yourself for some pain</strong></p>
+</div>
+<div class="footer">
+<p><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a> | <a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
+</div>
+</section><section id="basic-vocabulary" class="slide level2"><h2>Basic vocabulary</h2>
+<div class="columns">
+<div class="column" style="width:34%;">
+<ul>
+<li class="fragment">Every such project is called <span class="text-color-highlight-secondary">repository</span> (ie a <em>repo</em>)</li>
+<li class="fragment">Your <strong>local</strong> repository is called <span class="text-color-highlight-tertiary">local</span>
+</li>
+<li class="fragment">Your <strong>online</strong> repository, is called <span class="text-color-highlight-tertiary">remote</span>
+</li>
+</ul>
+</div>
+<div class="column fragment" style="width:55%;">
+<p><br><br><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://user.oc-static.com/upload/2022/01/04/16412576933806_image30.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository">https://openclassrooms.com/</a></p>
+</div>
+</section><section id="note-on-practital-exercises" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">Note on practital exercises</span></h2>
+
+<img data-src="materials/monkey_see_monkey_do_by_adiasarahma.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<p><a href="https://www.deviantart.com/adiasarahma/">image by adiasarahma</a></p>
+</div>
+</section><section id="git-init-project-first" class="slide level2"><h2>Git init (project first)</h2>
+<p>Activate <span class="text-color-highlight-primary">git</span> for a repo</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">GH Desktop</a></li>
+<li><a href="#tabset-1-2">RStudio</a></li>
+<li><a href="#tabset-1-3">Command line</a></li>
+<li><a href="#tabset-1-4">VS Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>Create new project with git tracking</p>
+<div class="columns">
+<div class="column" style="width:25%;">
+
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://docs.github.com/assets/cb-143755/mw-1440/images/help/desktop/lets-get-started.webp" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<p>For existing project</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Create new project with git tracking</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html">create_project</a></span><span class="op">(</span><span class="st">"&lt;DIRECTORY&gt;"</span><span class="op">)</span></span>
+<span><span class="co"># switch to the new project</span></span>
+<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-3">
+<p>For existing project</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Create new project with git tracking</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init <span class="op">&lt;</span>DIRECTORY<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-4">
+<p>Git integration is automatic in <span class="text-color-highlight-secondary">Source control</span> panel</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://www.sqlshack.com/visual-studio-code-vs-code-integration-with-git-source-control/">SQLShack</a></p>
+</div>
+</section><section id="practical-exercise-1" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<div class="r-fit-text">
+<p>Make a new project with Git tracking</p>
+</div>
+<p></p>
+<div class="countdown" id="timer_438d1513" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
+</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
+</section><section id="git-clone-repo-first" class="slide level2"><h2>Git clone (repo first)</h2>
+<p>Copy (download) for <span class="text-color-highlight-primary">remote repo</span> to <span class="text-color-highlight-secondary">local</span> machine</p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">GH Desktop</a></li>
+<li><a href="#tabset-2-2">RStudio</a></li>
+<li><a href="#tabset-2-3">Command line</a></li>
+<li><a href="#tabset-2-4">VS Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_from_github.html">create_from_github</a></span><span class="op">(</span></span>
+<span>  repo_spec <span class="op">=</span> <span class="st">"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</span>,</span>
+<span>  destdir <span class="op">=</span> <span class="st">"&lt;DIRECTORY&gt;"</span>,</span>
+<span>  fork <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>OWNER<span class="op">&gt;</span>/<span class="op">&lt;</span>REPO<span class="op">&gt;</span>.git <span class="op">&lt;</span>DIRECTORY<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-4">
+<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
+<p>Paste in URL: <code>"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</code></p>
+</div>
+</div>
+</div>
+</section><section id="practical-exercise-2" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<div class="r-fit-text">
+<p>clone a repo (e.g.&nbsp;<a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024">this one</a>)</p>
+</div>
+<p></p>
+<div class="countdown" id="timer_31875566" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
+</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="a-commit" class="slide level2"><h2>a commit</h2>
 <p>A <span class="text-color-highlight-primary"><strong>commit</strong></span> is a <span class="text-color-highlight-secondary">record</span> of a change</p>
 <p>If you create or edit a file in your repository and save the changes, you need to <span class="text-color-highlight-secondary">record</span> your change via a <span class="text-color-highlight-primary"><strong>commit</strong></span></p>
@@ -508,7 +667,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.wikihow.com/images/thumb/0/06/Play-Chess-Step-28-Version-5.jpg/aid54279-v4-728px-Play-Chess-Step-28-Version-5.jpg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://www.wikihow.com/images/thumb/0/06/Play-Chess-Step-28-Version-5.jpg/aid54279-v4-728px-Play-Chess-Step-28-Version-5.jpg" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -532,7 +691,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.wikihow.com/images/thumb/c/c3/Play-Chess-Step-24-Version-5.jpg/aid54279-v4-728px-Play-Chess-Step-24-Version-5.jpg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://www.wikihow.com/images/thumb/c/c3/Play-Chess-Step-24-Version-5.jpg/aid54279-v4-728px-Play-Chess-Step-24-Version-5.jpg" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -543,7 +702,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/git01.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="materials/git01.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -557,165 +716,14 @@
 </section><section id="a-commit-2" class="slide level2"><h2>a commit</h2>
 <p><br><br></p>
 
-<img data-src="materials/git02.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="gitgithub-setup-aka-git-hell" class="slide level2"><h2>Git/GitHub setup AKA “git hell”</h2>
-
-<img data-src="materials/ErrorManagement.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p>Follow instructions in <a href="https://ondrejmottl.github.io/VersionControl_gitHell/">Version Control - git hell</a> (a separate presentation).</p>
-<div class="blockquote">
-<p>Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle … <strong>Brace yourself for some pain</strong></p>
-</div>
-<div class="footer">
-<p><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a> | <a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
-</div>
-</section><section id="basic-vocabulary" class="slide level2"><h2>Basic vocabulary</h2>
-<div class="columns">
-<div class="column" style="width:34%;">
-<ul>
-<li class="fragment">
-<span class="text-color-highlight-primary">R script</span> is a record of code.</li>
-<li class="fragment">
-<span class="text-color-highlight-primary">R Project</span> is self contained project/study/paper containg R scripts, data, figures, etc..</li>
-<li class="fragment">Every such project is called <span class="text-color-highlight-secondary">repository</span> (ie a <em>repo</em>)</li>
-<li class="fragment">Your <strong>local</strong> repository is called <span class="text-color-highlight-tertiary">local</span>
-</li>
-<li class="fragment">Your <strong>online</strong> repository, is called <span class="text-color-highlight-tertiary">remote</span>
-</li>
-</ul>
-</div>
-<div class="column fragment" style="width:55%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://user.oc-static.com/upload/2022/01/04/16412576933806_image30.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository">https://openclassrooms.com/</a></p>
-</div>
-</section><section id="git-init-project-first" class="slide level2"><h2>Git init (project first)</h2>
-<p>Activate <span class="text-color-highlight-primary">git</span> for a repo</p>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">RStudio</a></li>
-<li><a href="#tabset-1-2">Command line</a></li>
-<li><a href="#tabset-1-3">VS Code</a></li>
-<li><a href="#tabset-1-4">GH Desktop</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<p>For existing project</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Create new project with git tracking</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html">create_project</a></span><span class="op">(</span><span class="st">"&lt;DIRECTORY&gt;"</span><span class="op">)</span></span>
-<span><span class="co"># switch to the new project</span></span>
-<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-1-2">
-<p>For existing project</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Create new project with git tracking</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init <span class="op">&lt;</span>DIRECTORY<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-1-3">
-<p>Git integration is automatic in <span class="text-color-highlight-secondary">Source control</span> panel</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-1-4">
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>For existing project</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-10757/mw-1440/images/help/desktop/add-local-repository-windows.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:40%;">
-<p>Create new project with git tracking</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-143755/mw-1440/images/help/desktop/lets-get-started.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://www.sqlshack.com/visual-studio-code-vs-code-integration-with-git-source-control/">SQLShack</a></p>
-</div>
-</section><section id="git-clone-repo-first" class="slide level2"><h2>Git clone (repo first)</h2>
-<p>Copy (download) for <span class="text-color-highlight-primary">remote repo</span> to <span class="text-color-highlight-secondary">local</span> machine</p>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">RStudio</a></li>
-<li><a href="#tabset-2-2">Command line</a></li>
-<li><a href="#tabset-2-3">VS Code</a></li>
-<li><a href="#tabset-2-4">GH Desktop</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_from_github.html">create_from_github</a></span><span class="op">(</span></span>
-<span>  repo_spec <span class="op">=</span> <span class="st">"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</span>,</span>
-<span>  destdir <span class="op">=</span> <span class="st">"&lt;DIRECTORY&gt;"</span>,</span>
-<span>  fork <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-2-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>OWNER<span class="op">&gt;</span>/<span class="op">&lt;</span>REPO<span class="op">&gt;</span>.git <span class="op">&lt;</span>DIRECTORY<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-2-3">
-<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
-<p>Paste in URL: <code>"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</code></p>
-</div>
-<div id="tabset-2-4">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="states-of-a-file" class="slide level2"><h2>3 states of a file</h2>
+<img data-src="materials/git02.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="states-of-a-file" class="slide level2"><h2>3 states of a file</h2>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:29%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://git-scm.com/images/about/index1@2x.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://git-scm.com/images/about/index1@2x.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -725,7 +733,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://i0.wp.com/jessitron.com/wp-content/uploads/2012/12/27eb8-screenshot2012-12-09at2.07.55pm.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://i0.wp.com/jessitron.com/wp-content/uploads/2012/12/27eb8-screenshot2012-12-09at2.07.55pm.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -740,10 +748,10 @@
 <p>Make a change to a file and save it. Now <em>stage</em> the change:</p>
 <div class="panel-tabset">
 <ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">RStudio</a></li>
-<li><a href="#tabset-3-2">Command line</a></li>
-<li><a href="#tabset-3-3">VS Code</a></li>
-<li><a href="#tabset-3-4">GH Desktop</a></li>
+<li><a data-tabby-default="" href="#tabset-3-1">GH Desktop</a></li>
+<li><a href="#tabset-3-2">RStudio</a></li>
+<li><a href="#tabset-3-3">Command line</a></li>
+<li><a href="#tabset-3-4">VS Code</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-3-1">
@@ -752,50 +760,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://annakrystalli.me/talks/assets/git_tab.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<ul>
-<li>two yellow <code>??</code> indicates adding a file</li>
-<li>a blue <code>M</code> indicates edit a file that has already been committed</li>
-<li>a red <code>D</code> indicates deleting a file</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="tabset-3-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>FILE<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-3-3">
-<div class="columns">
-<div class="column" style="width:20%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/overview/stage-changes.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:20%;">
-
-</div>
-</div>
-</div>
-<div id="tabset-3-4">
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -809,44 +774,32 @@
 </div>
 </div>
 </div>
+<div id="tabset-3-2">
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://annakrystalli.me/talks/assets/git_tab.png" style="width:100.0%"></p>
+</figure>
 </div>
 </div>
-</section><section id="a-first-commit" class="slide level2"><h2>a first commit</h2>
-<p>Commit (record) <em>staged</em> changes:</p>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">RStudio</a></li>
-<li><a href="#tabset-4-2">Command line</a></li>
-<li><a href="#tabset-4-3">VS Code</a></li>
-<li><a href="#tabset-4-4">GH Desktop</a></li>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>two yellow <code>??</code> indicates adding a file</li>
+<li>a blue <code>M</code> indicates edit a file that has already been committed</li>
+<li>a red <code>D</code> indicates deleting a file</li>
 </ul>
-<div class="tab-content">
-<div id="tabset-4-1">
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
 <div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/19_commit_window.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>FILE<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">"commit message"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-4-3">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-staging.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-4">
+<div id="tabset-3-4">
 <div class="columns">
 <div class="column" style="width:20%;">
 
@@ -854,7 +807,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://user-images.githubusercontent.com/359239/43204294-df0e02b8-8ff6-11e8-9a6d-e1ceb6e460e2.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/overview/stage-changes.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -866,32 +819,86 @@
 </div>
 </div>
 </div>
-</section><section id="dissection-of-a-commit" class="slide level2"><h2>Dissection of a commit</h2>
+</section><section id="practical-exercise-3" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<div class="r-fit-text">
+<ol type="1">
+<li>Make changes to a file</li>
+<li>Make a new file</li>
+<li>Stage the changes</li>
+</ol>
+</div>
+<p></p>
+<div class="countdown" id="timer_f2882ff0" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
+</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
+</section><section id="a-first-commit" class="slide level2"><h2>a first commit</h2>
+<p>Commit (record) <em>staged</em> changes:</p>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-4-1">GH Desktop</a></li>
+<li><a href="#tabset-4-2">RStudio</a></li>
+<li><a href="#tabset-4-3">Command line</a></li>
+<li><a href="#tabset-4-4">VS Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://user-images.githubusercontent.com/359239/43204294-df0e02b8-8ff6-11e8-9a6d-e1ceb6e460e2.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/19_commit_window.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">"commit message"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-4">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-staging.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="review-history" class="slide level2"><h2>Review history</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href=""></a><span class="ex">$</span> git log <span class="at">--stat</span></span>
-<span id="cb9-2"><a href=""></a><span class="ex">commit</span> 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7</span>
-<span id="cb9-3"><a href=""></a><span class="ex">Author:</span> Scott Chacon <span class="op">&lt;</span>schacon@gee-mail.com<span class="op">&gt;</span></span>
-<span id="cb9-4"><a href=""></a><span class="ex">Date:</span>   Sat Mar 15 16:40:33 2008 <span class="at">-0700</span></span>
-<span id="cb9-5"><a href=""></a></span>
-<span id="cb9-6"><a href=""></a>    <span class="ex">Remove</span> unnecessary test</span>
-<span id="cb9-7"><a href=""></a></span>
-<span id="cb9-8"><a href=""></a> <span class="ex">lib/simplegit.rb</span> <span class="kw">|</span> <span class="ex">5</span> <span class="at">-----</span></span>
-<span id="cb9-9"><a href=""></a> <span class="ex">1</span> file changed, 5 deletions<span class="er">(</span><span class="ex">-</span><span class="kw">)</span></span>
-<span id="cb9-10"><a href=""></a></span>
-<span id="cb9-11"><a href=""></a><span class="ex">commit</span> a11bef06a3f659402fe7563abf99ad00de2209e6</span>
-<span id="cb9-12"><a href=""></a><span class="ex">Author:</span> Scott Chacon <span class="op">&lt;</span>schacon@gee-mail.com<span class="op">&gt;</span></span>
-<span id="cb9-13"><a href=""></a><span class="ex">Date:</span>   Sat Mar 15 10:31:28 2008 <span class="at">-0700</span></span>
-<span id="cb9-14"><a href=""></a></span>
-<span id="cb9-15"><a href=""></a>    <span class="ex">Initial</span> commit</span>
-<span id="cb9-16"><a href=""></a></span>
-<span id="cb9-17"><a href=""></a> <span class="ex">README</span>           <span class="kw">|</span>  <span class="ex">6</span> ++++++</span>
-<span id="cb9-18"><a href=""></a> <span class="ex">Rakefile</span>         <span class="kw">|</span> <span class="ex">23</span> +++++++++++++++++++++++</span>
-<span id="cb9-19"><a href=""></a> <span class="ex">lib/simplegit.rb</span> <span class="kw">|</span> <span class="ex">25</span> +++++++++++++++++++++++++</span>
-<span id="cb9-20"><a href=""></a> <span class="ex">3</span> files changed, 54 insertions<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
 </div>
 </div><div class="column" style="width:40%;">
+<h3 id="dissecting-a-commit">Dissecting a commit</h3>
 <p><strong>SHA</strong> - unique identifier</p>
 <p><strong>Author</strong> - who has done this?</p>
 <p><strong>Date</strong> - when was this done?</p>
@@ -914,7 +921,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/20_git_commit.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/20_git_commit.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -925,94 +932,43 @@
 </div>
 </section><section id="commit-history" class="slide level2"><h2>Commit history</h2>
 
-<img data-src="https://happygitwithr.com/img/commit-diff-sha-tag.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://happygitwithr.com/img/commit-diff-sha-tag.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a></p>
 </div>
-</section><section id="practical-exercise-1" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+</section><section id="practical-exercise-4" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
 <div class="r-fit-text">
 <ol type="1">
-<li>Clone a repo</li>
 <li>commit some changes</li>
 <li>review history</li>
 </ol>
 </div>
 <p></p>
-<div class="countdown" id="timer_38439420" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<div class="countdown" id="timer_2b64bcce" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
 <button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
+</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="remote" class="slide level2"><h2>remote</h2>
 
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/0_workflow_git.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/0_workflow_git.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="remote-1" class="slide level2"><h2>remote</h2>
 <p>Now we need to <em>sync</em> chnages with the <span class="text-color-highlight-primary">remote</span> using <span class="text-color-highlight-secondary"><strong>PUSH</strong></span></p>
 <div class="panel-tabset">
 <ul id="tabset-5" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-5-1">RStudio</a></li>
-<li><a href="#tabset-5-2">Command line</a></li>
-<li><a href="#tabset-5-3">VS Code</a></li>
-<li><a href="#tabset-5-4">GH Desktop</a></li>
+<li><a data-tabby-default="" href="#tabset-5-1">GH Desktop</a></li>
+<li><a href="#tabset-5-2">RStudio</a></li>
+<li><a href="#tabset-5-3">Command line</a></li>
+<li><a href="#tabset-5-4">VS Code</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-5-1">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github.html">use_github</a></span><span class="op">(</span>protocol  <span class="op">=</span> <span class="st">"https"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/21_push.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-2">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/<span class="op">&lt;</span>OWNER<span class="op">&gt;</span>/<span class="op">&lt;</span>REPO<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-5-3">
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/remote-repo.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:40%;">
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/sync.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-4">
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Add a remote to existing local repo (only once):</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1022,7 +978,57 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<p>Add a remote to existing local repo (only once):</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github.html">use_github</a></span><span class="op">(</span>protocol  <span class="op">=</span> <span class="st">"https"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Push local to remote (GitHub):</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/21_push.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-5-3">
+<p>Add a remote to existing local repo (only once):</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/<span class="op">&lt;</span>OWNER<span class="op">&gt;</span>/<span class="op">&lt;</span>REPO<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Push local to remote (GitHub):</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-5-4">
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Add a remote to existing local repo (only once):</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/remote-repo.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p>Push local to remote (GitHub):</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/sync.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1032,30 +1038,42 @@
 </div>
 </div>
 </div>
+</section><section id="practical-exercise-5" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<div class="r-fit-text">
+<ol type="1">
+<li>Publish repo to GitHub</li>
+<li>make new commit(s)</li>
+<li>Push changes to remote</li>
+</ol>
+</div>
+<p></p>
+<div class="countdown" id="timer_4407dfb1" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
+</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="github-intermezzo" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">GitHub intermezzo</span></h2>
 </section><section id="a-github-repo" class="slide level2"><h2>A GitHub repo</h2>
 
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/10_new_repo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/10_new_repo.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="github-creating-a-repo" class="slide level2"><h2>GitHub creating a repo</h2>
 
-<img data-src="materials/01_new_button.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/01_new_button.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="github-creating-a-repo-1" class="slide level2"><h2>GitHub creating a repo</h2>
 
-<img data-src="materials/03_owner.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/03_owner.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="github-creating-a-repo-2" class="slide level2"><h2>GitHub creating a repo</h2>
 
-<img data-src="materials/04_name.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/04_name.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="github-creating-a-repo-3" class="slide level2"><h2>GitHub creating a repo</h2>
 
-<img data-src="materials/05_visibility.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/05_visibility.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="github-creating-a-repo-4" class="slide level2"><h2>GitHub creating a repo</h2>
@@ -1063,7 +1081,7 @@
 <p><strong>.gitignore</strong> - list of files ignored by GitHub (more about it later)</p>
 <p><strong>license</strong> - tell other what they can do wit your code</p>
 
-<img data-src="materials/06_readme.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/06_readme.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="a-note-on-usethis" class="slide level2"><h2>A note on {usethis}</h2>
@@ -1073,82 +1091,90 @@
 <strong>README</strong> - description of the project</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_readme_rmd.html">use_readme_md</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_readme_rmd.html">use_readme_md</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>
 <strong>LICENSE</strong> - restict the use of your code</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/licenses.html">use_mit_license</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Ondřej Mottl"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/licenses.html">use_mit_license</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Ondřej Mottl"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>
 <strong>CONTRIBUTING.md</strong> - guidelines for contributors</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/tidyverse.html">use_tidy_contributing</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/tidyverse.html">use_tidy_contributing</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>
 <strong>CODE_OF_CONDUCT.md</strong> - set the tone for discourse between contributors</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_code_of_conduct.html">use_code_of_conduct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_code_of_conduct.html">use_code_of_conduct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="github-creating-a-repo-5" class="slide level2"><h2>GitHub creating a repo</h2>
 
-<img data-src="materials/07_final_click.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="materials/07_final_click.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
+</section><section id="practical-exercise-6" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<div class="r-fit-text">
+<p>Create a new repo on GitHub</p>
+</div>
+<p></p>
+<div class="countdown" id="timer_a0136371" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
+</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="gitignore-file" class="slide level2"><h2>
 <code>.gitignore</code> file</h2>
 <p>A guide to the <span class="text-color-highlight-primary">git</span> which files <span class="text-color-highlight-secondary"><strong>should be ignored for detecting changes</strong></span></p>
 <p>Here is an example of a <strong>.gitignore</strong> file:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href=""></a><span class="co"># History files</span></span>
-<span id="cb17-2"><a href=""></a><span class="ex">.Rhistory</span></span>
-<span id="cb17-3"><a href=""></a><span class="ex">.Rapp.history</span></span>
-<span id="cb17-4"><a href=""></a></span>
-<span id="cb17-5"><a href=""></a><span class="co"># Session Data files</span></span>
-<span id="cb17-6"><a href=""></a><span class="ex">.RData</span></span>
-<span id="cb17-7"><a href=""></a></span>
-<span id="cb17-8"><a href=""></a><span class="co"># RStudio files</span></span>
-<span id="cb17-9"><a href=""></a><span class="ex">.Rproj.user/</span></span>
-<span id="cb17-10"><a href=""></a></span>
-<span id="cb17-11"><a href=""></a><span class="co"># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3</span></span>
-<span id="cb17-12"><a href=""></a><span class="ex">.httr-oauth</span></span>
-<span id="cb17-13"><a href=""></a><span class="ex">.Rproj.user</span></span>
-<span id="cb17-14"><a href=""></a></span>
-<span id="cb17-15"><a href=""></a><span class="co">#data (excludes everything in the folder data)</span></span>
-<span id="cb17-16"><a href=""></a><span class="ex">data/*</span></span>
-<span id="cb17-17"><a href=""></a></span>
-<span id="cb17-18"><a href=""></a><span class="co"># you can make exceptions for specific files</span></span>
-<span id="cb17-19"><a href=""></a><span class="ex">!data/dragon_taxonomy.csv</span></span>
-<span id="cb17-20"><a href=""></a></span>
-<span id="cb17-21"><a href=""></a><span class="co">#figures &amp; output (excludes all figure files)</span></span>
-<span id="cb17-22"><a href=""></a><span class="ex">*.png</span></span>
-<span id="cb17-23"><a href=""></a><span class="ex">*.pdf</span></span>
-<span id="cb17-24"><a href=""></a><span class="ex">*.jpeg</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="true"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># History files</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="ex">.Rhistory</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="ex">.Rapp.history</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a></span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="co"># Session Data files</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="ex">.RData</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="co"># RStudio files</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a><span class="ex">.Rproj.user/</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a></span>
+<span id="cb16-11"><a href="#cb16-11"></a><span class="co"># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a><span class="ex">.httr-oauth</span></span>
+<span id="cb16-13"><a href="#cb16-13"></a><span class="ex">.Rproj.user</span></span>
+<span id="cb16-14"><a href="#cb16-14"></a></span>
+<span id="cb16-15"><a href="#cb16-15"></a><span class="co">#data (excludes everything in the folder data)</span></span>
+<span id="cb16-16"><a href="#cb16-16"></a><span class="ex">data/*</span></span>
+<span id="cb16-17"><a href="#cb16-17"></a></span>
+<span id="cb16-18"><a href="#cb16-18"></a><span class="co"># you can make exceptions for specific files</span></span>
+<span id="cb16-19"><a href="#cb16-19"></a><span class="ex">!data/dragon_taxonomy.csv</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a></span>
+<span id="cb16-21"><a href="#cb16-21"></a><span class="co">#figures &amp; output (excludes all figure files)</span></span>
+<span id="cb16-22"><a href="#cb16-22"></a><span class="ex">*.png</span></span>
+<span id="cb16-23"><a href="#cb16-23"></a><span class="ex">*.pdf</span></span>
+<span id="cb16-24"><a href="#cb16-24"></a><span class="ex">*.jpeg</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="update-local--pull" class="slide level2"><h2>update local- PULL</h2>
 
-<img data-src="https://sfdctechie.wordpress.com/wp-content/uploads/2019/12/github.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://sfdctechie.wordpress.com/wp-content/uploads/2019/12/github.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://sfdctechie.wordpress.com/2019/12/27/how-to-add-a-salesforce-dx-project-to-source-control-step-by-step-guide/">sfdc techie – Pavan’s blog</a></p>
 </div>
 </section><section id="update-local--pull-1" class="slide level2"><h2>update local- PULL</h2>
 
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/22_workflow2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/22_workflow2.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
 </div>
 </section><section id="update-local--pull-2" class="slide level2"><h2>update local- PULL</h2>
 <p>Now we need to <em>sync</em> chnages from the <span class="text-color-highlight-secondary">remote</span> to <span class="text-color-highlight-tertiary">local</span> the using <span class="text-color-highlight-primary"><strong>PULL</strong></span></p>
 <div class="panel-tabset">
 <ul id="tabset-6" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-6-1">RStudio</a></li>
-<li><a href="#tabset-6-2">Command line</a></li>
-<li><a href="#tabset-6-3">VS Code</a></li>
-<li><a href="#tabset-6-4">GH Desktop</a></li>
+<li><a data-tabby-default="" href="#tabset-6-1">GH Desktop</a></li>
+<li><a href="#tabset-6-2">RStudio</a></li>
+<li><a href="#tabset-6-3">Command line</a></li>
+<li><a href="#tabset-6-4">VS Code</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-6-1">
@@ -1160,7 +1186,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://annakrystalli.me/talks/assets/git_tab.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1169,12 +1195,6 @@
 </div>
 </div>
 <div id="tabset-6-2">
-<p>Pull from remote (GitHub) to local:</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-6-3">
 <div class="columns">
 <div class="column" style="width:10%;">
 
@@ -1183,12 +1203,18 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/vscode_sync.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://annakrystalli.me/talks/assets/git_tab.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div id="tabset-6-3">
+<p>Pull from remote (GitHub) to local:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-6-4">
@@ -1200,7 +1226,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="materials/vscode_sync.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1212,21 +1238,21 @@
 </div>
 </section><section id="merge-conflict" class="slide level2"><h2>Merge conflict 💩💩💩</h2>
 
-<img data-src="https://www.simplilearn.com/ice9/free_resources_article_thumb/pull-push.JPG" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p>A <span class="text-color-highlight-primary">merge conflict</span> can occur when you are changing the <span class="text-color-highlight-secondary">same line</span> in one file <a href=".text-color-highlight-tertiary">differently</a>.</p>
+<img data-src="https://www.simplilearn.com/ice9/free_resources_article_thumb/pull-push.JPG" style="width:100.0%" class="r-stretch quarto-figure-center"><p>A <span class="text-color-highlight-primary">merge conflict</span> can occur when you are changing the <span class="text-color-highlight-secondary">same line</span> in one file <a href=".text-color-highlight-tertiary">differently</a>.</p>
 <div class="footer">
 <p><a href="https://www.simplilearn.com/tutorials/git-tutorial/merge-conflicts-in-git">https://www.simplilearn.com/</a></p>
 </div>
 </section><section id="merge-conflict-1" class="slide level2"><h2>Merge conflict 💩💩💩</h2>
 <p><br></p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> https://github.com/picardis/myrepo.git</span>
-<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ot">! </span><span class="ex">[rejected]</span>        master <span class="at">-</span><span class="op">&gt;</span> master <span class="er">(</span><span class="ex">fetch</span> first<span class="kw">)</span></span>
-<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">error:</span> failed to push some refs to <span class="st">'https://github.com/picardis/myrepo.git'</span></span>
-<span id="cb19-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> Updates were rejected because the remote contains work that you do</span>
-<span id="cb19-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> not have locally. This is usually caused by another repository pushing</span>
-<span id="cb19-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> to the same ref. You may want to first integrate the remote changes</span>
-<span id="cb19-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> <span class="er">(</span><span class="ex">e.g.,</span> <span class="st">'git pull ...'</span><span class="kw">)</span> <span class="ex">before</span> pushing again.</span>
-<span id="cb19-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> See the <span class="st">'Note about fast-forwards'</span> in <span class="st">'git push --help'</span> for details.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> https://github.com/picardis/myrepo.git</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a> <span class="ot">! </span><span class="ex">[rejected]</span>        master <span class="at">-</span><span class="op">&gt;</span> master <span class="er">(</span><span class="ex">fetch</span> first<span class="kw">)</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="ex">error:</span> failed to push some refs to <span class="st">'https://github.com/picardis/myrepo.git'</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> Updates were rejected because the remote contains work that you do</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> not have locally. This is usually caused by another repository pushing</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> to the same ref. You may want to first integrate the remote changes</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> <span class="er">(</span><span class="ex">e.g.,</span> <span class="st">'git pull ...'</span><span class="kw">)</span> <span class="ex">before</span> pushing again.</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> See the <span class="st">'Note about fast-forwards'</span> in <span class="st">'git push --help'</span> for details.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="columns">
 <div class="column fragment" style="width:50%;">
@@ -1245,27 +1271,32 @@
 </div>
 </section><section id="merge-conflict-2" class="slide level2"><h2>Merge conflict 💩💩💩</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">If</span> you have questions, please</span>
-<span id="cb20-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt; HEAD</span></span>
-<span id="cb20-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">open an issue</span></span>
-<span id="cb20-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">=======</span></span>
-<span id="cb20-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">ask your question in IRC.</span></span>
-<span id="cb20-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">&gt;&gt;&gt;&gt;&gt; branch-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">If</span> you have questions, please</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt; HEAD</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="st">open an issue</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="st">=======</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="st">ask your question in IRC.</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="st">&gt;&gt;&gt;&gt;&gt; branch-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Delete the unwanted text (including the <em>decorations</em>)</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">If</span> you have questions, please</span>
-<span id="cb21-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">ask</span> your question in IRC.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">If</span> you have questions, please</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ask</span> your question in IRC.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then <strong>save the file</strong>, <strong>stage</strong>, and <strong>commit</strong> again</p>
 </div>
-</section><section id="practical-exercise-2" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+</section><section id="practical-exercise-7" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<p>In pairs:</p>
 <div class="r-fit-text">
-<p>Create a merge conflict and fix it</p>
+<ol type="1">
+<li>Clone someone’s else repo</li>
+<li>Create a merge conflict</li>
+<li>fix it</li>
+</ol>
 </div>
 <p></p>
-<div class="countdown" id="timer_32298be7" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<div class="countdown" id="timer_afd67b07" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
 <button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
 </div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="ups-i-have-made-a-mistake" class="slide level2"><h2>Ups! I have made a mistake 😮</h2>
@@ -1273,28 +1304,13 @@
 <p><span class="text-color-highlight-primary">Variant A</span>: I commited but <strong>NOT</strong> <span class="text-color-highlight-tertiary">pushed yet</span>.</p>
 <div class="panel-tabset">
 <ul id="tabset-7" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-7-1">RStudio</a></li>
-<li><a href="#tabset-7-2">Command line</a></li>
-<li><a href="#tabset-7-3">VS Code</a></li>
-<li><a href="#tabset-7-4">GH Desktop</a></li>
+<li><a data-tabby-default="" href="#tabset-7-1">GH Desktop</a></li>
+<li><a href="#tabset-7-2">RStudio</a></li>
+<li><a href="#tabset-7-3">Command line</a></li>
+<li><a href="#tabset-7-4">VS Code</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-7-1">
-<p>RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The <strong>Terminal</strong> (NOT <em>console</em>) has more commands and options and will be handy for trouble shooting.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD@{1}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-7-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD@{1}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-7-3">
-<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
-<p>Write <span class="text-color-highlight-tertiary">Git: Undo Last Commit</span></p>
-</div>
-<div id="tabset-7-4">
 <div class="columns">
 <div class="column" style="width:10%;">
 
@@ -1302,13 +1318,28 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-12506/mw-1440/images/help/desktop/undo-commit.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-12506/mw-1440/images/help/desktop/undo-commit.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </div>
+</div>
+<div id="tabset-7-2">
+<p>RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The <strong>Terminal</strong> (NOT <em>console</em>) has more commands and options and will be handy for trouble shooting.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD@{1}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-7-3">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD@{1}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-7-4">
+<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
+<p>Write <span class="text-color-highlight-tertiary">Git: Undo Last Commit</span></p>
 </div>
 </div>
 </div>
@@ -1317,26 +1348,43 @@
 <p><span class="text-color-highlight-secondary">Variant B</span>: I commited but <strong>AND</strong> <span class="text-color-highlight-tertiary">pushed already</span>.</p>
 <div class="panel-tabset">
 <ul id="tabset-8" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-8-1">RStudio</a></li>
-<li><a href="#tabset-8-2">Command line</a></li>
-<li><a href="#tabset-8-3">VS Code</a></li>
-<li><a href="#tabset-8-4">GH Desktop</a></li>
+<li><a data-tabby-default="" href="#tabset-8-1">GH Desktop</a></li>
+<li><a href="#tabset-8-2">RStudio</a></li>
+<li><a href="#tabset-8-3">Command line</a></li>
+<li><a href="#tabset-8-4">VS Code</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-8-1">
-<p>We need the <strong>Terminal</strong> (NOT <em>console</em>) again.</p>
-<p>Copy the <strong>SHA</strong> of the last commit</p>
+<p>Right-click on the commit you would like to undo to and select <span class="text-color-highlight-tertiary">Revert a commit</span>.</p>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:70%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="op">&lt;</span>SHA<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="tabset-8-2">
+<p>We need the <strong>Terminal</strong> (NOT <em>console</em>) again.</p>
 <p>Copy the <strong>SHA</strong> of the last commit</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="op">&lt;</span>SHA<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="op">&lt;</span>SHA<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-8-3">
+<p>Copy the <strong>SHA</strong> of the last commit</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="op">&lt;</span>SHA<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-8-4">
 <p>In the <span class="text-color-highlight-secondary">Source control</span> panel -&gt; <strong>COMMITS</strong> section -&gt; Right-click on the commit you want to revert to -&gt; Select the <span class="text-color-highlight-tertiary">Reset Current Branch to Previous Commit</span></p>
 <div class="columns">
 <div class="column" style="width:10%;">
@@ -1345,7 +1393,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.gitkraken.com/wp-content/uploads/2022/03/gitlens-revert-commit-sidebar-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://www.gitkraken.com/wp-content/uploads/2022/03/gitlens-revert-commit-sidebar-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1353,34 +1401,18 @@
 </div>
 </div>
 </div>
-<div id="tabset-8-4">
-<p>Right-click on the commit you would like to revert to and select <span class="text-color-highlight-tertiary">Reset to commit</span>.</p>
-<div class="columns">
-<div class="column" style="width:10%;">
+</div>
+</div>
+</section></section><section><section id="branches" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">Branches</span></h1>
 
-</div><div class="column" style="width:70%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="branches" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">Branches</span></h2>
 </section><section id="branches-1" class="slide level2"><h2>Branches</h2>
 
-<img data-src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*T4HW6dnJQQz2c2soc4AeFQ.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*T4HW6dnJQQz2c2soc4AeFQ.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://nicholas0010.medium.com/git-for-dummies-2-2-2874e625bf65">Git For Dummies</a></p>
 </div>
 </section><section id="branches-2" class="slide level2"><h2>Branches</h2>
 
-<img data-src="https://coderefinery.github.io/git-intro/_images/gophers.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://coderefinery.github.io/git-intro/_images/gophers.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://coderefinery.github.io/git-intro/commits/">coderefinery</a></p>
 </div>
 </section><section id="make-a-branch" class="slide level2"><h2>Make a branch</h2>
@@ -1398,7 +1430,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/5_make_new_branch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/5_make_new_branch.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1407,7 +1439,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/6_name_branch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/6_name_branch.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1418,7 +1450,7 @@
 <div id="tabset-9-2">
 <p>Copy the <strong>SHA</strong> of the last commit</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-9-3">
@@ -1429,7 +1461,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-create-branch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-create-branch.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1445,7 +1477,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1474,7 +1506,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/ChangeBranch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/ChangeBranch.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1485,7 +1517,7 @@
 <div id="tabset-10-2">
 <p>Copy the <strong>SHA</strong> of the last commit</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout  <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout  <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-10-3">
@@ -1496,7 +1528,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://geo-jobe.com/wp-content/uploads/2022/07/CheckoutOrCreateBranch-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://geo-jobe.com/wp-content/uploads/2022/07/CheckoutOrCreateBranch-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1512,7 +1544,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1522,7 +1554,7 @@
 </div>
 </div>
 </div>
-</section><section id="practical-exercise-3" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+</section><section id="practical-exercise-8" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
 <div class="r-fit-text">
 <ol type="1">
 <li>Make a branch and switch</li>
@@ -1531,31 +1563,31 @@
 </ol>
 </div>
 <p></p>
-<div class="countdown" id="timer_3c9795f1" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<div class="countdown" id="timer_64808b1a" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
 <button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
 </div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="merging-branches" class="slide level2"><h2>Merging branches</h2>
 
-<img data-src="https://media.geeksforgeeks.org/wp-content/uploads/20230516192737/git-three-way-merging.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merging-branches-1" class="slide level2"><h2>Merging branches</h2>
+<img data-src="https://media.geeksforgeeks.org/wp-content/uploads/20230516192737/git-three-way-merging.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="merging-branches-1" class="slide level2"><h2>Merging branches</h2>
 
-<img data-src="https://www.yakuter.com/wp-content/yuklemeler/1_sMJbSt3sLrC-sIsPOVRBdw.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="pull-request-pr" class="slide level2"><h2>Pull Request (PR)</h2>
+<img data-src="https://www.yakuter.com/wp-content/yuklemeler/1_sMJbSt3sLrC-sIsPOVRBdw.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="pull-request-pr" class="slide level2"><h2>Pull Request (PR)</h2>
 <p>Request to merge a branch</p>
 
-<img data-src="https://crunchify.com/wp-content/uploads/2017/09/Github-WorkFlow-Tips-Crunchify-Tips.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="pull-request---create" class="slide level2"><h2>Pull Request - create</h2>
+<img data-src="https://crunchify.com/wp-content/uploads/2017/09/Github-WorkFlow-Tips-Crunchify-Tips.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="pull-request---create" class="slide level2"><h2>Pull Request - create</h2>
 <p>After you <strong>push</strong> new branch, you should have a green button <span class="text-color-highlight-primary">Compare &amp; pull request</span></p>
 
-<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/CreatePullReq.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/CreatePullReq.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></p>
 </div>
 </section><section id="pull-request---components" class="slide level2"><h2>Pull Request - components</h2>
 
-<img data-src="https://www.dummies.com/wp-content/uploads/github-open-pull-request.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://www.dummies.com/wp-content/uploads/github-open-pull-request.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://www.dummies.com/article/technology/programming-web-design/general-programming-web-design/what-are-github-pull-requests-264741/">GitHub for dummies</a></p>
 </div>
 </section><section id="pull-request---overview" class="slide level2"><h2>Pull Request - Overview</h2>
 <p>Now you can <span class="text-color-highlight-primary">more commits</span>, add <span class="text-color-highlight-secondary">Comment</span> to start discussion, or <span class="text-color-highlight-tertiary">merge</span></p>
 
-<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/Merge.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/Merge.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></p>
 </div>
 </section><section id="note-on-markdown" class="slide level2"><h2>Note on Markdown</h2>
@@ -1567,7 +1599,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/Markdown_syntax.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="materials/Markdown_syntax.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1584,7 +1616,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/906613c7-94fb-41a8-9c74-77895dec7f53.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/906613c7-94fb-41a8-9c74-77895dec7f53.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1595,7 +1627,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/fa7e8e52-7037-40f9-a1fd-3dcc916d9840.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/fa7e8e52-7037-40f9-a1fd-3dcc916d9840.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1606,7 +1638,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/c44e8334-f187-4386-8946-d7996f883de3.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/c44e8334-f187-4386-8946-d7996f883de3.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1619,7 +1651,7 @@
 </section><section id="delete-branch" class="slide level2"><h2>Delete branch</h2>
 <p>We can delete branch directly on GitHub after merging</p>
 
-<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/DeleteBranch.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/DeleteBranch.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></p>
 </div>
 </section><section id="delete-branch-1" class="slide level2"><h2>Delete branch</h2>
@@ -1636,21 +1668,21 @@
 <p>We need the <strong>Terminal</strong> (NOT <em>console</em>) again.</p>
 <p>To delete a <span class="text-color-highlight-secondary">local</span> branch</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To delete a <span class="text-color-highlight-primary">remote</span> branch</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-11-2">
 <p>To delete a <span class="text-color-highlight-secondary">local</span> branch</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To delete a <span class="text-color-highlight-primary">remote</span> branch</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-11-3">
@@ -1665,7 +1697,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-28505/mw-1440/images/help/desktop/delete-branch-win.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="https://docs.github.com/assets/cb-28505/mw-1440/images/help/desktop/delete-branch-win.webp" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1678,37 +1710,37 @@
 </section><section id="pull-request---review" class="slide level2"><h2>Pull Request - review</h2>
 <p>A tool to <span class="text-color-highlight-primary">review</span> <span class="text-color-highlight-secondary">suggested</span> changes</p>
 
-<img data-src="https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://www.atlassian.com/blog/bitbucket/5-pull-request-must-haves">https://www.atlassian.com/</a></p>
 </div>
 </section><section id="pull-request---review-1" class="slide level2"><h2>Pull Request - review</h2>
 <p>On <span class="text-color-highlight-primary">someone else’s PR</span>, you can comment on <strong>individual lines</strong> or <strong>whole files</strong></p>
 
-<img data-src="materials/5_review.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="pull-request---review-2" class="slide level2"><h2>Pull Request - review</h2>
+<img data-src="materials/5_review.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="pull-request---review-2" class="slide level2"><h2>Pull Request - review</h2>
 
-<img data-src="https://www.researchgate.net/profile/Yue-Yu-126/publication/321632407/figure/fig1/AS:569701769191424@1512838894719/Example-comments-on-GitHub_W640.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://www.researchgate.net/profile/Yue-Yu-126/publication/321632407/figure/fig1/AS:569701769191424@1512838894719/Example-comments-on-GitHub_W640.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="http://dx.doi.org/10.1007/s11390-017-1783-2">What Are They Talking About? Analyzing Code Reviews in Pull-Based Development Model</a></p>
 </div>
 </section><section id="merge-conflict-with-branch" class="slide level2"><h2>Merge conflict with branch 💩</h2>
 <p>Merge conflict with branches is much more pleasant😎</p>
 
-<img data-src="materials/4_merge_conflict.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merge-conflict-with-branch-1" class="slide level2"><h2>Merge conflict with branch 💩</h2>
+<img data-src="materials/4_merge_conflict.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="merge-conflict-with-branch-1" class="slide level2"><h2>Merge conflict with branch 💩</h2>
 <p>Edit the file as needed</p>
 
-<img data-src="materials/5_conflict.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merge-conflict-with-branch-2" class="slide level2"><h2>Merge conflict with branch 💩</h2>
+<img data-src="materials/5_conflict.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="merge-conflict-with-branch-2" class="slide level2"><h2>Merge conflict with branch 💩</h2>
 <p>Commit the changes</p>
 
-<img data-src="materials/7_solved.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="practical-exercise-4" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
+<img data-src="materials/7_solved.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="practical-exercise-9" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
 <div class="r-fit-text">
 <p>Merge a branch</p>
 </div>
 <p></p>
-<div class="countdown" id="timer_c7262bd1" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
+<div class="countdown" id="timer_0866f5b8" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
 <button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
 </div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
 </section><section id="bonus-for-r-users" class="slide level2"><h2>Bonus for R users</h2>
 
-<img data-src="https://www.garrickadenbuie.com/blog/pull-request-flow-usethis/usethis-pr-flow-medium.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<img data-src="https://www.garrickadenbuie.com/blog/pull-request-flow-usethis/usethis-pr-flow-medium.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
 <p><a href="https://www.garrickadenbuie.com/blog/pull-request-flow-usethis">Pull Request Flow with usethis</a></p>
 </div>
 </section></section><section><section id="outro" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">Outro</span></h1>
@@ -1719,7 +1751,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/Ondrej_Mottl-transparent-shadow.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="materials/Ondrej_Mottl-transparent-shadow.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1727,7 +1759,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/qr_linktree.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="materials/qr_linktree.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1756,10 +1788,8 @@
 <p><a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024">😸 Code on GitHub</a></p>
 <p><a href="https://ondrejmottl.github.io/VersionControl_DataStewards_Sep2024/">🖥️ Slides</a></p>
 </div>
-<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
-</div>
 </div>
 </section></section>
 </div>
@@ -1772,6 +1802,7 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -2067,9 +2098,10 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      function tippyHover(el, contentFn) {
         const config = {
           allowHTML: true,
+          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -2079,17 +2111,8 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start',
+          placement: 'bottom-start'
         };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

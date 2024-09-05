@@ -61,7 +61,7 @@ include_local_figure("openresearch.jpg")
 [This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
 :::
 
-# Open Science
+## Open Science
 
 ```{r}
 #| label: open-science
@@ -131,9 +131,8 @@ It is all about [keeping track]{.text-color-highlight-primary} of [changes]{.tex
 * *It broke … hopefully I have a working version somewhere?*
 * *Can you please send me the latest version?*
 * *Which version are you using?*
-* *Found a bug! Since when was it there?*
 * *I am sure it used to work. When did it change?*
-* *My laptop is gone. Is my thesis now gone?*
+* *My laptop is gone. Is my data now gone?*
 
 :::
 
@@ -195,6 +194,212 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/a/
 :::
 
 ::::
+
+## Git/GitHub setup AKA "git hell"
+
+```{r}
+#| label: ErrorManagement
+include_local_figure("ErrorManagement.jpg")
+```
+
+Follow instructions in [Version Control - git hell](https://ondrejmottl.github.io/VersionControl_gitHell/) (a separate presentation).
+
+::: {.blockquote}
+Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle ... **Brace yourself for some pain**
+:::
+
+::: footer
+[Happy Git and GitHub for the useR](https://happygitwithr.com/install-intro) |
+[This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
+:::
+
+## Basic vocabulary
+
+:::: columns
+
+::: {.column width="34%" .incremental}
+
+ * Every such project is called [repository]{.text-color-highlight-secondary} (ie a *repo*) 
+ * Your **local** repository is called [local]{.text-color-highlight-tertiary}
+ * Your **online** repository, is called [remote]{.text-color-highlight-tertiary}
+
+:::
+
+:::{.column width="55%" .fragment}
+
+<br>
+<br>
+<br>
+
+```{r}
+#| label: local-remote
+knitr::include_graphics("https://user.oc-static.com/upload/2022/01/04/16412576933806_image30.png")
+```
+:::
+
+::::
+
+::: footer
+[https://openclassrooms.com/](https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository)
+::: 
+
+## [Note on practital exercises]{.r-fit-text} {.subtitle .textcenter}
+
+```{r}
+#| label: practical-exercise-note
+include_local_figure("monkey_see_monkey_do_by_adiasarahma.jpg")
+```
+
+::: footer
+[image by adiasarahma](https://www.deviantart.com/adiasarahma/)
+:::
+
+## Git init (project first)
+
+Activate [git]{.text-color-highlight-primary} for a repo 
+
+::::: {.panel-tabset}
+
+### GH Desktop
+
+Create new project with git tracking
+
+:::: {.columns}
+
+::: {.column width="25%"}
+:::
+
+::: {.column width="50%"}
+```{r}
+#| label: git-init-GH-new
+knitr::include_graphics("https://docs.github.com/assets/cb-143755/mw-1440/images/help/desktop/lets-get-started.webp")
+```
+:::
+
+::::
+
+### RStudio
+
+For existing project
+
+```{r}
+#| label: git-init-rstudio
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+usethis::use_git()
+```
+
+Create new project with git tracking
+
+```{r}
+#| label: git-init-rstudio-new
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+usethis::create_project("<DIRECTORY>")
+# switch to the new project
+usethis::use_git()
+```
+
+### Command line
+
+For existing project
+
+```{bash}
+#| label: git-init-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git init
+```
+
+Create new project with git tracking
+
+```{bash}
+#| label: git-init-cl-new
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git init <DIRECTORY>
+```
+
+### VS Code
+
+Git integration is automatic in [Source control]{.text-color-highlight-secondary} panel
+
+```{r}
+#| label: git-init-vscode
+knitr::include_graphics("https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png")
+```
+
+:::::
+
+::: footer
+[SQLShack](https://www.sqlshack.com/visual-studio-code-vs-code-integration-with-git-source-control/)
+:::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+::: {.r-fit-text} 
+Make a new project with Git tracking
+:::
+
+`r countdown(minutes = 5)`
+
+## Git clone (repo first)
+
+Copy (download) for  [remote repo]{.text-color-highlight-primary} to [local]{.text-color-highlight-secondary} machine
+
+::::: {.panel-tabset}
+
+### GH Desktop
+
+```{r}
+#| label: git-clone-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp")
+```
+
+
+### RStudio
+
+```{r}
+#| label: git-clone-rstudio
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+usethis::create_from_github(
+  repo_spec = "https://github.com/<OWNER>/<REPO>.git",
+  destdir = "<DIRECTORY>",
+  fork = FALSE
+  )
+```
+
+### Command line
+
+```{bash}
+#| label: git-colne-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git clone https://github.com/<OWNER>/<REPO>.git <DIRECTORY>
+```
+
+### VS Code
+
+Open [Command Palette]{.text-color-highlight-secondary} (`Ctrl+Shift+p`)
+
+Paste in URL: `"https://github.com/<OWNER>/<REPO>.git"`
+
+:::::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+::: {.r-fit-text} 
+clone a repo (e.g. [this one](https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024))
+:::
+
+`r countdown(minutes = 5)`
 
 ## a commit
 
@@ -271,192 +476,6 @@ include_local_figure("git01.png")
 include_local_figure("git02.png")
 ```
 
-## Git/GitHub setup AKA "git hell"
-
-
-```{r}
-#| label: ErrorManagement
-include_local_figure("ErrorManagement.jpg")
-```
-
-Follow instructions in [Version Control - git hell](https://ondrejmottl.github.io/VersionControl_gitHell/) (a separate presentation).
-
-::: {.blockquote}
-Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle ... **Brace yourself for some pain**
-:::
-
-::: footer
-[Happy Git and GitHub for the useR](https://happygitwithr.com/install-intro) |
-[This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
-:::
-
-## Basic vocabulary
-
-:::: columns
-
-::: {.column width="34%" .incremental}
-
- * [R script]{.text-color-highlight-primary} is a record of code.
- * [R Project]{.text-color-highlight-primary} is self contained project/study/paper containg R scripts, data, figures, etc..
- * Every such project is called [repository]{.text-color-highlight-secondary} (ie a *repo*) 
- * Your **local** repository is called [local]{.text-color-highlight-tertiary}
- * Your **online** repository, is called [remote]{.text-color-highlight-tertiary}
-
-:::
-
-:::{.column width="55%" .fragment}
-```{r}
-#| label: local-remote
-knitr::include_graphics("https://user.oc-static.com/upload/2022/01/04/16412576933806_image30.png")
-```
-:::
-
-::::
-
-::: footer
-[https://openclassrooms.com/](https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository)
-::: 
-
-## Git init (project first)
-
-Activate [git]{.text-color-highlight-primary} for a repo 
-
-::::: {.panel-tabset}
-
-### RStudio
-
-For existing project
-
-```{r}
-#| label: git-init-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::use_git()
-```
-
-Create new project with git tracking
-
-```{r}
-#| label: git-init-rstudio-new
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::create_project("<DIRECTORY>")
-# switch to the new project
-usethis::use_git()
-```
-
-
-### Command line
-
-For existing project
-
-```{bash}
-#| label: git-init-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git init
-```
-
-Create new project with git tracking
-
-```{bash}
-#| label: git-init-cl-new
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git init <DIRECTORY>
-```
-
-### VS Code
-
-Git integration is automatic in [Source control]{.text-color-highlight-secondary} panel
-
-```{r}
-#| label: git-init-vscode
-knitr::include_graphics("https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png")
-```
-
-### GH Desktop
-
-:::: columns
-
-::: {.column width="60%"}
-
-For existing project
-
-```{r}
-#| label: git-init-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-10757/mw-1440/images/help/desktop/add-local-repository-windows.webp")
-```
-
-:::
-
-::: {.column width="40%"}
-
-Create new project with git tracking
-
-```{r}
-#| label: git-init-GH-new
-knitr::include_graphics("https://docs.github.com/assets/cb-143755/mw-1440/images/help/desktop/lets-get-started.webp")
-```
-
-:::
-
-::::
-
-:::::
-
-::: footer
-[SQLShack](https://www.sqlshack.com/visual-studio-code-vs-code-integration-with-git-source-control/)
-:::
-
-## Git clone (repo first)
-
-Copy (download) for  [remote repo]{.text-color-highlight-primary} to [local]{.text-color-highlight-secondary} machine
-
-::::: {.panel-tabset}
-
-### RStudio
-
-```{r}
-#| label: git-clone-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::create_from_github(
-  repo_spec = "https://github.com/<OWNER>/<REPO>.git",
-  destdir = "<DIRECTORY>",
-  fork = FALSE
-  )
-```
-
-### Command line
-
-```{bash}
-#| label: git-colne-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git clone https://github.com/<OWNER>/<REPO>.git <DIRECTORY>
-```
-
-### VS Code
-
-Open [Command Palette]{.text-color-highlight-secondary} (`Ctrl+Shift+p`)
-
-Paste in URL: `"https://github.com/<OWNER>/<REPO>.git"`
-
-### GH Desktop
-
-```{r}
-#| label: git-clone-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp")
-```
-
-:::::
 
 ## 3 states of a file 
 
@@ -489,6 +508,28 @@ knitr::include_graphics("https://i0.wp.com/jessitron.com/wp-content/uploads/2012
 Make a change to a file and save it. Now *stage* the change:
 
 ::::: {.panel-tabset}
+
+### GH Desktop
+
+:::: columns
+::: {.column width="45%"}
+
+```{r}
+#| label: git-stage-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp")
+```
+
+:::
+
+::: {.column width="45%"}
+
+* The red icon indicates removed files.
+* The yellow icon indicates modified files.
+* The green icon indicates added files.
+
+:::
+
+::::
 
 ### RStudio
 
@@ -544,34 +585,43 @@ knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol
 
 ::::
 
-### GH Desktop
-
-:::: columns
-::: {.column width="45%"}
-
-```{r}
-#| label: git-stage-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp")
-```
-
-:::
-
-::: {.column width="45%"}
-
-* The red icon indicates removed files.
-* The yellow icon indicates modified files.
-* The green icon indicates added files.
-:::
-
-::::
-
 :::::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+::: {.r-fit-text} 
+1. Make changes to a file
+2. Make a new file
+3. Stage the changes 
+:::
+
+`r countdown(minutes = 5)`
+
 
 ## a first commit
 
 Commit (record) *staged* changes:
 
 ::::: {.panel-tabset}
+
+### GH Desktop
+
+:::: columns
+
+::: {.column width="20%"}
+:::
+
+::: {.column width="60%"}
+```{r}
+#| label: git-commit-gh
+knitr::include_graphics("https://user-images.githubusercontent.com/359239/43204294-df0e02b8-8ff6-11e8-9a6d-e1ceb6e460e2.png")
+```
+:::
+
+::: {.column width="20%"}
+:::
+
+::::
 
 ### RStudio
 
@@ -597,61 +647,24 @@ git commit -am "commit message"
 knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-staging.png")
 ```
 
-### GH Desktop
-
-:::: columns
-
-::: {.column width="20%"}
-:::
-
-::: {.column width="60%"}
-```{r}
-#| label: git-commit-gh
-knitr::include_graphics("https://user-images.githubusercontent.com/359239/43204294-df0e02b8-8ff6-11e8-9a6d-e1ceb6e460e2.png")
-```
-:::
-
-::: {.column width="20%"}
-:::
-
-::::
-
 :::::
 
-## Dissection of a commit
+## Review history
 
 :::: columns
 
 :::{.column width="60%"}
-```{bash}
-#| label: git-commit-dissection
-#| echo: true
-#| eval: false
-#| code-line-numbers: true
-$ git log --stat
-commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
-Author: Scott Chacon <schacon@gee-mail.com>
-Date:   Sat Mar 15 16:40:33 2008 -0700
 
-    Remove unnecessary test
-
- lib/simplegit.rb | 5 -----
- 1 file changed, 5 deletions(-)
-
-commit a11bef06a3f659402fe7563abf99ad00de2209e6
-Author: Scott Chacon <schacon@gee-mail.com>
-Date:   Sat Mar 15 10:31:28 2008 -0700
-
-    Initial commit
-
- README           |  6 ++++++
- Rakefile         | 23 +++++++++++++++++++++++
- lib/simplegit.rb | 25 +++++++++++++++++++++++++
- 3 files changed, 54 insertions(+)
+```{r}
+#| label: GH-history
+knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp")
 ```
+
 :::
 
 :::{.column width="40%"}
+
+### Dissecting a commit
 
 **SHA** - unique identifier
 
@@ -705,12 +718,11 @@ knitr::include_graphics("https://happygitwithr.com/img/commit-diff-sha-tag.png")
 ## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
 
 ::: {.r-fit-text} 
-1. Clone a repo
-2. commit some changes
-3. review history
+1. commit some changes
+2. review history
 :::
 
-`r countdown(minutes = 3)`
+`r countdown(minutes = 5)`
 
 ## remote
 
@@ -729,6 +741,26 @@ Now we need to *sync* chnages with the [remote]{.text-color-highlight-primary} u
 
 
 ::::: {.panel-tabset}
+
+### GH Desktop
+
+:::: columns
+::: {.column width="50%"}
+Add a remote to existing local repo (only once):
+```{r}
+#| label: git--mk-remote-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp")
+```
+:::
+
+::: {.column width="50%"}
+Push local to remote (GitHub):
+```{r}
+#| label: git-push-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp")
+```
+:::
+::::
 
 ### RStudio
 
@@ -791,27 +823,17 @@ knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol
 :::
 ::::
 
-### GH Desktop
-
-:::: columns
-::: {.column width="50%"}
-Add a remote to existing local repo (only once):
-```{r}
-#| label: git--mk-remote-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp")
-```
-:::
-
-::: {.column width="50%"}
-Push local to remote (GitHub):
-```{r}
-#| label: git-push-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp")
-```
-:::
-::::
-
 :::::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+::: {.r-fit-text}
+1. Publish repo to GitHub
+2. make new commit(s)
+3. Push changes to remote
+:::
+
+`r countdown(minutes = 5)`
 
 ## [GitHub intermezzo]{.r-fit-text} {.subtitle .textcenter}
 
@@ -942,6 +964,14 @@ include_local_figure("07_final_click.png")
 [biostats: Version control with GitHub and RStudio](https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html)
 :::
 
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+::: {.r-fit-text}
+Create a new repo on GitHub
+:::
+
+`r countdown(minutes = 5)`
+
 ## `.gitignore` file
 
 A guide to the [git]{.text-color-highlight-primary} which files [**should be ignored for detecting changes**]{.text-color-highlight-secondary}
@@ -1006,6 +1036,21 @@ Now we need to *sync* chnages from the [remote]{.text-color-highlight-secondary}
 
 ::::: {.panel-tabset}
 
+### GH Desktop
+
+:::: columns
+::: {.column width="10%"}
+:::
+
+::: {.column width="70%"}
+Pull from remote (GitHub) to local
+```{r}
+#| label: git-pull-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp")
+```
+:::
+::::
+
 ### RStudio
 
 :::: columns
@@ -1044,21 +1089,6 @@ Pull from remote (GitHub) to local
 ```{r}
 #| label: git-pull-vscode
 include_local_figure("vscode_sync.png")
-```
-:::
-::::
-
-### GH Desktop
-
-:::: columns
-::: {.column width="10%"}
-:::
-
-::: {.column width="70%"}
-Pull from remote (GitHub) to local
-```{r}
-#| label: git-pull-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp")
 ```
 :::
 ::::
@@ -1149,8 +1179,12 @@ Then **save the file**, **stage**, and **commit** again
 
 ## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
 
+In pairs:
+
 :::{.r-fit-text}
-Create a merge conflict and fix it
+1. Clone someone's else repo
+2. Create a merge conflict 
+3. fix it
 :::
 
 `r countdown(minutes = 3)`
@@ -1162,6 +1196,20 @@ How to undo last commit?
 [Variant A]{.text-color-highlight-primary}: I commited but **NOT** [pushed yet]{.text-color-highlight-tertiary}.
 
 ::::: {.panel-tabset}
+
+### GH Desktop
+
+:::: columns
+:::{.column width="10%"}
+:::
+
+:::{.column width="70%"}
+```{r}
+#| label: git-undo-commit-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-12506/mw-1440/images/help/desktop/undo-commit.webp")
+```
+:::
+::::
 
 ### RStudio
 
@@ -1191,20 +1239,6 @@ Open [Command Palette]{.text-color-highlight-secondary} (`Ctrl+Shift+p`)
 
 Write [Git: Undo Last Commit]{.text-color-highlight-tertiary}
 
-### GH Desktop
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="70%"}
-```{r}
-#| label: git-undo-commit-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-12506/mw-1440/images/help/desktop/undo-commit.webp")
-```
-:::
-::::
-
 :::::
 
 ## Ups! I have made a mistake 😮
@@ -1214,6 +1248,22 @@ How to undo last commit?
 [Variant B]{.text-color-highlight-secondary}: I commited but **AND** [pushed already]{.text-color-highlight-tertiary}.
 
 ::::: {.panel-tabset}
+
+### GH Desktop
+
+Right-click on the commit you would like to undo to and select [Revert a commit]{.text-color-highlight-tertiary}.
+
+:::: columns
+:::{.column width="10%"}
+:::
+
+:::{.column width="70%"}
+```{r}
+#| label: git-reset-commit-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp")
+```
+:::
+::::
 
 ### RStudio
 
@@ -1257,25 +1307,17 @@ knitr::include_graphics("https://www.gitkraken.com/wp-content/uploads/2022/03/gi
 :::
 ::::
 
-### GH Desktop
-
-Right-click on the commit you would like to revert to and select [Reset to commit]{.text-color-highlight-tertiary}.
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="70%"}
-```{r}
-#| label: git-reset-commit-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp")
-```
-:::
-::::
-
 :::::
 
-## [Branches]{.r-fit-text} {.subtitle .textcenter}
+## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+
+:::{.r-fit-text}
+Undo/Revert commit
+:::
+
+`r countdown(minutes = 3)`
+
+# [Branches]{.r-fit-text} {.title .textcenter}
 
 ## Branches
 
