@@ -16,6 +16,7 @@ $white: #ffffffff;
 $darkCyan: #008691;
 $lightCyan : #5BB1B8;
 $camelliaRose: #EB5D81;
+$iris: #613DC1;
 
 $color-primary: $black !default;
 $color-secondary: $white !default;
@@ -23,9 +24,10 @@ $color-secondary: $white !default;
 $color-high-primary: $darkCyan !default;
 $color-high-secondary: $camelliaRose !default;
 $color-high-tertiary: $lightCyan !default;
+$color-high-quaternary: $iris !default;
 
 $body-color: $color-primary !default;
-$link-color: $color-high-secondary !default;
+$link-color: $color-high-quaternary !default;
 $selection-bg: $color-high-tertiary !default;
 $code-color:  $color-primary !default;
 
@@ -180,7 +182,7 @@ h2, .reveal h2 {
 }
 
 .reveal .subtitle {
-  background-color: $color-high-secondary;
+  background-color: $color-high-tertiary;
   color: $backgroundColor;
   text-align: center;
 }
@@ -191,7 +193,7 @@ h2, .reveal h2 {
 }
 
 .reveal .exercise {
-  background-color: $color-high-tertiary;
+  background-color: $color-high-secondary;
   color: $color-secondary;
 }
 
@@ -217,7 +219,6 @@ code {
 
 /* List styling */
 ul {
-  list-style-type: none;
   padding-left: 0;
   margin-left: $blockMargin;
 }

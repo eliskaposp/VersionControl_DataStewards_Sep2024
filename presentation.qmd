@@ -278,6 +278,28 @@ knitr::include_graphics("https://docs.github.com/assets/cb-143755/mw-1440/images
 
 ::::
 
+### Command line
+
+For existing project
+
+```{bash}
+#| label: git-init-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git init
+```
+
+Create new project with git tracking
+
+```{bash}
+#| label: git-init-cl-new
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git init <DIRECTORY>
+```
+
 ### RStudio
 
 For existing project
@@ -302,27 +324,6 @@ usethis::create_project("<DIRECTORY>")
 usethis::use_git()
 ```
 
-### Command line
-
-For existing project
-
-```{bash}
-#| label: git-init-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git init
-```
-
-Create new project with git tracking
-
-```{bash}
-#| label: git-init-cl-new
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git init <DIRECTORY>
-```
 
 ### VS Code
 
@@ -362,6 +363,15 @@ Example of online repo: [OndrejMottl/VersionControl_DataStewards_Sep2024](https:
 knitr::include_graphics("https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp")
 ```
 
+### Command line
+
+```{bash}
+#| label: git-colne-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git clone https://github.com/<OWNER>/<REPO>.git <DIRECTORY>
+```
 
 ### RStudio
 
@@ -377,15 +387,6 @@ usethis::create_from_github(
   )
 ```
 
-### Command line
-
-```{bash}
-#| label: git-colne-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git clone https://github.com/<OWNER>/<REPO>.git <DIRECTORY>
-```
 
 ### VS Code
 
@@ -533,6 +534,17 @@ knitr::include_graphics("https://docs.github.com/assets/cb-16555/mw-1440/images/
 
 ::::
 
+
+### Command line
+
+```{bash}
+#| label: git-stage-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git add <FILE>
+```
+
 ### RStudio
 
 :::: columns
@@ -554,16 +566,6 @@ knitr::include_graphics("https://annakrystalli.me/talks/assets/git_tab.png")
 :::
 
 ::::
-
-### Command line
-
-```{bash}
-#| label: git-stage-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git add <FILE>
-```
 
 ### VS Code
 
@@ -625,13 +627,6 @@ knitr::include_graphics("https://user-images.githubusercontent.com/359239/432042
 
 ::::
 
-### RStudio
-
-```{r}
-#| label: git-commit-rstudio
-knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittutorial/19_commit_window.png")
-```
-
 ### Command line
 
 ```{bash}
@@ -640,6 +635,13 @@ knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittu
 #| eval: false
 #| code-line-numbers: false
 git commit -am "commit message"
+```
+
+### RStudio
+
+```{r}
+#| label: git-commit-rstudio
+knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittutorial/19_commit_window.png")
 ```
 
 ### VS Code
@@ -764,24 +766,6 @@ knitr::include_graphics("https://docs.github.com/assets/cb-17787/mw-1440/images/
 :::
 ::::
 
-### RStudio
-
-Add a remote to existing local repo (only once):
-
-```{r}
-#| label: git-mk-remote-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::use_github(protocol  = "https")
-```
-
-Push local to remote (GitHub):
-
-```{r}
-#| label: git-push-rstudio
-knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittutorial/21_push.png")
-```
 
 ### Command line
 
@@ -803,6 +787,25 @@ Push local to remote (GitHub):
 #| eval: false
 #| code-line-numbers: false
 git push
+```
+
+### RStudio
+
+Add a remote to existing local repo (only once):
+
+```{r}
+#| label: git-mk-remote-rstudio
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+usethis::use_github(protocol  = "https")
+```
+
+Push local to remote (GitHub):
+
+```{r}
+#| label: git-push-rstudio
+knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittutorial/21_push.png")
 ```
 
 ### VS Code
@@ -1053,6 +1056,18 @@ knitr::include_graphics("https://docs.github.com/assets/cb-24440/mw-1440/images/
 :::
 ::::
 
+### Command line
+
+Pull from remote (GitHub) to local:
+
+```{bash}
+#| label: git-pull-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git pull
+```
+
 ### RStudio
 
 :::: columns
@@ -1067,18 +1082,6 @@ knitr::include_graphics("https://annakrystalli.me/talks/assets/git_tab.png")
 ```
 :::
 ::::
-
-### Command line
-
-Pull from remote (GitHub) to local:
-
-```{bash}
-#| label: git-pull-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git pull
-```
 
 ### VS Code
 
@@ -1214,22 +1217,22 @@ knitr::include_graphics("https://docs.github.com/assets/cb-12506/mw-1440/images/
 :::
 ::::
 
-### RStudio
-
-RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The **Terminal** (NOT *console*) has more commands and options and will be handy for trouble shooting.
+### Command line
 
 ```{bash}
-#| label: git-undo-commit-rstudio
+#| label: git-undo-commit-cl
 #| echo: true
 #| eval: false
 #| code-line-numbers: false
 git reset --soft HEAD@{1}
 ```
 
-### Command line
+### RStudio
+
+RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The **Terminal** (NOT *console*) has more commands and options and will be handy for trouble shooting.
 
 ```{bash}
-#| label: git-undo-commit-cl
+#| label: git-undo-commit-rstudio
 #| echo: true
 #| eval: false
 #| code-line-numbers: false
@@ -1268,6 +1271,18 @@ knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images
 :::
 ::::
 
+### Command line
+
+Copy the **SHA** of the last commit
+
+```{bash}
+#| label: git-reset-commit-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git reset --hard <SHA>
+```
+
 ### RStudio
 
 We need the **Terminal** (NOT *console*) again.
@@ -1276,18 +1291,6 @@ Copy the **SHA** of the last commit
 
 ```{bash}
 #| label: git-reset-commit-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git reset --hard <SHA>
-```
-
-### Command line
-
-Copy the **SHA** of the last commit
-
-```{bash}
-#| label: git-reset-commit-cl
 #| echo: true
 #| eval: false
 #| code-line-numbers: false
@@ -1362,6 +1365,18 @@ knitr::include_graphics("https://docs.github.com/assets/cb-26427/mw-1440/images/
 :::
 ::::
 
+### Command line
+
+Copy the **SHA** of the last commit
+
+```{bash}
+#| label: git-make-branch-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git branch <BRANCH-NAME>
+```
+
 ### RStudio
 
 :::: columns
@@ -1379,18 +1394,6 @@ knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/fork_
 ```
 :::
 ::::
-
-### Command line
-
-Copy the **SHA** of the last commit
-
-```{bash}
-#| label: git-make-branch-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git branch <BRANCH-NAME>
-```
 
 ### VS Code
 
@@ -1430,6 +1433,18 @@ knitr::include_graphics("https://docs.github.com/assets/cb-38142/mw-1440/images/
 :::
 ::::
 
+### Command line
+
+Copy the **SHA** of the last commit
+
+```{bash}
+#| label: git-switch-branch-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git checkout  <BRANCH-NAME>
+```
+
 ### RStudio
 
 :::: columns
@@ -1443,18 +1458,6 @@ knitr::include_graphics("https://aberdeenstudygroup.github.io/studyGroup/lessons
 ```
 :::
 ::::
-
-### Command line
-
-Copy the **SHA** of the last commit
-
-```{bash}
-#| label: git-switch-branch-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git checkout  <BRANCH-NAME>
-```
 
 ### VS Code
 
@@ -1732,6 +1735,28 @@ knitr::include_graphics("https://docs.github.com/assets/cb-28505/mw-1440/images/
 :::
 ::::
 
+### Command line
+
+To delete a [local]{.text-color-highlight-secondary} branch
+
+```{bash}
+#| label: git-delete-branch-local-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git branch -d <BRANCH-NAME>
+```
+
+To delete a [remote]{.text-color-highlight-primary} branch
+
+```{bash}
+#| label: git-delete-branch-remote-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git push origin --delete <BRANCH-NAME>
+```
+
 ### RStudio
 
 We need the **Terminal** (NOT *console*) again.
@@ -1750,28 +1775,6 @@ To delete a [remote]{.text-color-highlight-primary} branch
 
 ```{bash}
 #| label: git-delete-branch-remote-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git push origin --delete <BRANCH-NAME>
-```
-
-### Command line
-
-To delete a [local]{.text-color-highlight-secondary} branch
-
-```{bash}
-#| label: git-delete-branch-local-cl
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git branch -d <BRANCH-NAME>
-```
-
-To delete a [remote]{.text-color-highlight-primary} branch
-
-```{bash}
-#| label: git-delete-branch-remote-cl
 #| echo: true
 #| eval: false
 #| code-line-numbers: false
