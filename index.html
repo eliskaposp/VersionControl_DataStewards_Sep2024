@@ -1,2245 +1,667 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<script src="presentation_files/libs/clipboard/clipboard.min.js"></script>
-<script src="presentation_files/libs/quarto-html/tabby.min.js"></script>
-<script src="presentation_files/libs/quarto-html/popper.min.js"></script>
-<script src="presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
-<title>presentation</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="presentation_files/libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="presentation_files/libs/revealjs/dist/reveal.css">
-<style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-      vertical-align: middle;
-    }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #042d3e; -webkit-text-stroke: #042d3e}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #37429b; -webkit-text-stroke: #37429b}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #0000e9; -webkit-text-stroke: #0000e9; background-color: #eef0f2}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #4c4c4c; -webkit-text-stroke: #4c4c4c; background-color: #eef0f2}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #1c683c; -webkit-text-stroke: #1c683c; background-color: #eef0f2}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #042d3e; -webkit-text-stroke: #042d3e; background-color: #eef0f2}
+    p.p17 {margin: 0.0px 0.0px 12.0px 0.0px; font: 13.0px Menlo; -webkit-text-stroke: #000000}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #1c683c; -webkit-text-stroke: #1c683c}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #042d3e; -webkit-text-stroke: #042d3e; background-color: #eef0f2; min-height: 15.0px}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    li.li8 {margin: 0.0px 0.0px 2.4px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    li.li11 {margin: 0.0px 0.0px 2.4px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    li.li22 {margin: 0.0px 0.0px 2.4px 0.0px; font: 12.0px Times}
+    li.li24 {margin: 0.0px 0.0px 2.4px 0.0px; font: 12.0px Times; -webkit-text-stroke: #0000e9}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none}
+    span.s3 {font: 18.0px 'Apple Color Emoji'; font-kerning: none}
+    span.s4 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
+    span.s5 {font-kerning: none; background-color: #b3b3b3}
+    span.s6 {-webkit-text-stroke: 0px #000000}
+    span.s7 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s8 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s9 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0000e9}
+    span.s10 {font-kerning: none; color: #37429b; background-color: #eef0f2; -webkit-text-stroke: 0px #37429b}
+    span.s11 {font-kerning: none; background-color: #eef0f2}
+    span.s12 {font-kerning: none; color: #4c4c4c; background-color: #eef0f2; -webkit-text-stroke: 0px #4c4c4c}
+    span.s13 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s14 {font-kerning: none; color: #37429b; -webkit-text-stroke: 0px #37429b}
+    span.s15 {font-kerning: none; color: #4c4c4c; -webkit-text-stroke: 0px #4c4c4c}
+    span.s16 {font-kerning: none; color: #1c683c; -webkit-text-stroke: 0px #1c683c}
+    span.s17 {font-kerning: none; color: #042d3e; -webkit-text-stroke: 0px #042d3e}
+    span.s18 {font-kerning: none; color: #7b4705; -webkit-text-stroke: 0px #7b4705}
+    span.s19 {font: 13.0px Menlo; font-kerning: none}
+    span.s20 {font: 12.0px Times; font-kerning: none}
+    span.s21 {font-kerning: none; color: #042d3e; background-color: #eef0f2; -webkit-text-stroke: 0px #042d3e}
+    span.s22 {font-kerning: none; color: #53631a; background-color: #eef0f2; -webkit-text-stroke: 0px #53631a}
+    span.s23 {font-kerning: none; color: #1c683c; background-color: #eef0f2; -webkit-text-stroke: 0px #1c683c}
+    span.s24 {font: 18.0px Times; font-kerning: none}
+    span.s25 {font-kerning: none; color: #53631a; -webkit-text-stroke: 0px #53631a}
+    span.s26 {font-kerning: none; color: #9b0003; -webkit-text-stroke: 0px #9b0003}
+    span.s27 {font: 19.5px Menlo; font-kerning: none}
+    span.s28 {font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s29 {font: 12.0px 'Apple Color Emoji'; text-decoration: underline ; font-kerning: none}
+    span.s30 {font: 12.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s31 {color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s32 {font: 12.0px 'Apple Color Emoji'; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s33 {font: 12.0px 'Apple Color Emoji'; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    ol.ol1 {list-style-type: decimal}
+    ul.ul1 {list-style-type: disc}
   </style>
-<link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto.css">
-<link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="presentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-<link href="presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
-<style type="text/css">
-    .reveal div.sourceCode {
-      margin: 0;
-      overflow: auto;
-    }
-    .reveal div.hanging-indent {
-      margin-left: 1em;
-      text-indent: -1em;
-    }
-    .reveal .slide:not(.center) {
-      height: 100%;
-    }
-    .reveal .slide.scrollable {
-      overflow-y: auto;
-    }
-    .reveal .footnotes {
-      height: 100%;
-      overflow-y: auto;
-    }
-    .reveal .slide .absolute {
-      position: absolute;
-      display: block;
-    }
-    .reveal .footnotes ol {
-      counter-reset: ol;
-      list-style-type: none; 
-      margin-left: 0;
-    }
-    .reveal .footnotes ol li:before {
-      counter-increment: ol;
-      content: counter(ol) ". "; 
-    }
-    .reveal .footnotes ol li > p:first-child {
-      display: inline-block;
-    }
-    .reveal .slide ul,
-    .reveal .slide ol {
-      margin-bottom: 0.5em;
-    }
-    .reveal .slide ul li,
-    .reveal .slide ol li {
-      margin-top: 0.4em;
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide ul[role="tablist"] li {
-      margin-bottom: 0;
-    }
-    .reveal .slide ul li > *:first-child,
-    .reveal .slide ol li > *:first-child {
-      margin-block-start: 0;
-    }
-    .reveal .slide ul li > *:last-child,
-    .reveal .slide ol li > *:last-child {
-      margin-block-end: 0;
-    }
-    .reveal .slide .columns:nth-child(3) {
-      margin-block-start: 0.8em;
-    }
-    .reveal blockquote {
-      box-shadow: none;
-    }
-    .reveal .tippy-content>* {
-      margin-top: 0.2em;
-      margin-bottom: 0.7em;
-    }
-    .reveal .tippy-content>*:last-child {
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide > img.stretch.quarto-figure-center,
-    .reveal .slide > img.r-stretch.quarto-figure-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-left,
-    .reveal .slide > img.r-stretch.quarto-figure-left  {
-      display: block;
-      margin-left: 0;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-right,
-    .reveal .slide > img.r-stretch.quarto-figure-right  {
-      display: block;
-      margin-left: auto;
-      margin-right: 0; 
-    }
-  </style>
-<link href="presentation_files/libs/countdown/countdown.css" rel="stylesheet">
-<script src="presentation_files/libs/countdown/countdown.js"></script>
 </head>
-<body class="quarto-light">
-  <div class="reveal">
-    <div class="slides">
-
-
-<section><section id="the-basics-of-version-control" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">The basics of Version Control</span></h1>
-<p>Ondřej Mottl</p>
-<p>Setkání komunity Data Stewardů</p>
-<p>10.09.2024</p>
-</section><section id="evolution" class="slide level2"><h2>Evolution</h2>
-
-<img data-src="materials/openresearch.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
-</div>
-</section><section id="open-science" class="slide level2"><h2>Open Science</h2>
-
-<img data-src="materials/UNESCO-Open_science-pillars-en.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://doi.org/10.54677/UTCD9302">UNESCO (2022). Understanding open science — Factsheet — SC-PBS-STIP/2022/OST/1.</a></p>
-</div>
-</section><section id="a-better-view" class="slide level2"><h2>A better view</h2>
-
-<img data-src="materials/os_taxonomy.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://www.fosteropenscience.eu/">https://www.fosteropenscience.eu/</a></p>
-</div>
-</section><section id="the-journey" class="slide level2"><h2>The Journey</h2>
-
-<img data-src="materials/ReproducibleJourney.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
-</div>
-</section></section><section><section id="version-control" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">Version control</span></h1>
-
-</section><section id="ring-a-bell" class="slide level2"><h2>Ring a bell ?</h2>
-
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/phd101212s.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="what-is-version-control" class="slide level2"><h2>What is Version Control? 🤔</h2>
-
-<img data-src="materials/VersionControl.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="textcenter">
-<p>It is all about <span class="text-color-highlight-primary">keeping track</span> of <span class="text-color-highlight-secondary">changes</span> 📓✍️</p>
-</div>
-<div class="footer">
-<p><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
-</div>
-</section><section id="practical-exercise" class="slide level2 exercise textcenter"><h2>Practical Exercise</h2>
-<p></p>
-<div class="countdown" id="timer_52437da9" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="do-you-recognize-some-of-these-questions">Do you recognize some of these questions?</h3>
-<ul>
-<li><em>It broke … hopefully I have a working version somewhere?</em></li>
-<li><em>Can you please send me the latest version?</em></li>
-<li><em>Which version are you using?</em></li>
-<li><em>I am sure it used to work. When did it change?</em></li>
-<li><em>My laptop is gone. Is my data now gone?</em></li>
+<body>
+<h1 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>The basics of Version Control</b></span></h1>
+<p class="p2"><span class="s1">Eliška Pospíchalová</span></p>
+<p class="p2"><span class="s1">Tahle prezentace je test</span></p>
+<p class="p2"><span class="s1">10.09.2024</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Evolution</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Open Science</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://doi.org/10.54677/UTCD9302">UNESCO (2022). Understanding open science — Factsheet — SC-PBS-STIP/2022/OST/1.</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>A better view</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://www.fosteropenscience.eu/">https://www.fosteropenscience.eu/</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>The Journey</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></span></p>
+<h1 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Version control</b></span></h1>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Ring a bell ?</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>What is Version Control? </b></span><span class="s3">🤔</span></h2>
+<p class="p2"><span class="s1">It is all about keeping track of changes </span><span class="s4">📓✍️</span></p>
+<p class="p4"><span class="s2"><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">03:00</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Do you recognize some of these questions?</b></span></h3>
+<ul class="ul1">
+  <li class="li8"><span class="s6"><i></i></span><span class="s1"><i>It broke … hopefully I have a working version somewhere?</i></span></li>
+  <li class="li8"><span class="s6"><i></i></span><span class="s1"><i>Can you please send me the latest version?</i></span></li>
+  <li class="li8"><span class="s6"><i></i></span><span class="s1"><i>Which version are you using?</i></span></li>
+  <li class="li8"><span class="s6"><i></i></span><span class="s1"><i>I am sure it used to work. When did it change?</i></span></li>
+  <li class="li8"><span class="s6"><i></i></span><span class="s1"><i>My laptop is gone. Is my data now gone?</i></span></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<h3 id="how-do-you-keep-track-of-changes">How do you keep track of changes?</h3>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://ecorepsci.github.io/reproducible-science/img/version-nightmare.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://ecorepsci.github.io/reproducible-science/index.html">Reproducible Data Science</a></p>
-</div>
-</section><section id="section" class="slide level2"><h2></h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 class="textcenter" id="git">Git</h3>
-<ul>
-<li>local software</li>
-<li>keep track of changes of files</li>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>How do you keep track of changes?</b></span></h3>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s2"><a href="https://ecorepsci.github.io/reproducible-science/index.html">Reproducible Data Science</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Git</b></span></h3>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">local software</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">keep track of changes of files</span></li>
 </ul>
-<p><br></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/768px-Git_icon.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
-
-</div><div class="column" style="width:45%;">
-<h3 class="textcenter" id="github">GitHub</h3>
-<ul>
-<li>host server</li>
-<li>store (git) the data</li>
-<li>project management, collaboration, publishing</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub</b></span></h3>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">host server</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">store (git) the data</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">project management, collaboration, publishing</span></li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="gitgithub-setup-aka-git-hell" class="slide level2"><h2>Git/GitHub setup AKA “git hell”</h2>
-
-<img data-src="materials/ErrorManagement.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p>Follow instructions in <a href="https://ondrejmottl.github.io/VersionControl_gitHell/">Version Control - git hell</a> (a separate presentation).</p>
-<div class="blockquote">
-<p>Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle … <strong>Brace yourself for some pain</strong></p>
-</div>
-<div class="footer">
-<p><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a> | <a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
-</div>
-</section><section id="basic-vocabulary" class="slide level2"><h2>Basic vocabulary</h2>
-<div class="columns">
-<div class="column" style="width:34%;">
-<ul>
-<li class="fragment">Every such project is called <span class="text-color-highlight-secondary">repository</span> (ie a <em>repo</em>)</li>
-<li class="fragment">Your <strong>local</strong> repository is called <span class="text-color-highlight-tertiary">local</span>
-</li>
-<li class="fragment">Your <strong>online</strong> repository, is called <span class="text-color-highlight-tertiary">remote</span>
-</li>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Git/GitHub setup AKA “git hell”</b></span></h2>
+<p class="p2"><span class="s1">Follow instructions in <a href="https://ondrejmottl.github.io/VersionControl_gitHell/"><span class="s7">Version Control - git hell</span></a> (a separate presentation).</span></p>
+<p class="p2"><span class="s1">Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle … <b>Brace yourself for some pain</b></span></p>
+<p class="p4"><span class="s2"><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a></span><span class="s8"> | <a href="https://zenodo.org/doi/10.5281/zenodo.3332807"><span class="s9">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</span></a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Basic vocabulary</b></span></h2>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">Every such project is called repository (ie a <i>repo</i>)</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Your <b>local</b> repository is called local</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Your <b>online</b> repository, is called remote</span></li>
 </ul>
-</div>
-<div class="column fragment" style="width:55%;">
-<p><br><br><br></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://user.oc-static.com/upload/2022/01/04/16412576933806_image30.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository">https://openclassrooms.com/</a></p>
-</div>
-</section><section id="note-on-practital-exercises" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">Note on practital exercises</span></h2>
-
-<img data-src="materials/monkey_see_monkey_do_by_adiasarahma.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://www.deviantart.com/adiasarahma/">image by adiasarahma</a></p>
-</div>
-</section><section id="git-init-project-first" class="slide level2"><h2>Git init (project first)</h2>
-<p>Activate <span class="text-color-highlight-primary">git</span> for a repo</p>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">GH Desktop</a></li>
-<li><a href="#tabset-1-2">Command line</a></li>
-<li><a href="#tabset-1-3">RStudio</a></li>
-<li><a href="#tabset-1-4">VS Code</a></li>
+<p class="p2"><span class="s1"><br>
+<br>
+</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s2"><a href="https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository">https://openclassrooms.com/</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Note on practital exercises</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://www.deviantart.com/adiasarahma/">image by adiasarahma</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Git init (project first)</b></span></h2>
+<p class="p2"><span class="s1">Activate git for a repo</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<p>Create new project with git tracking</p>
-<div class="columns">
-<div class="column" style="width:25%;">
-
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-143755/mw-1440/images/help/desktop/lets-get-started.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<p>For existing project</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Create new project with git tracking</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init <span class="op">&lt;</span>DIRECTORY<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-1-3">
-<p>For existing project</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Create new project with git tracking</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html">create_project</a></span><span class="op">(</span><span class="st">"&lt;DIRECTORY&gt;"</span><span class="op">)</span></span>
-<span><span class="co"># switch to the new project</span></span>
-<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-1-4">
-<p>Git integration is automatic in <span class="text-color-highlight-secondary">Source control</span> panel</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://www.sqlshack.com/visual-studio-code-vs-code-integration-with-git-source-control/">SQLShack</a></p>
-</div>
-</section><section id="practical-exercise-1" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<p>Make a new project with Git tracking</p>
-</div>
-<p></p>
-<div class="countdown" id="timer_9752393e" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="git-clone-repo-first" class="slide level2"><h2>Git clone (repo first)</h2>
-<p>Copy (download) for <span class="text-color-highlight-primary">remote repo</span> to <span class="text-color-highlight-secondary">local</span> machine</p>
-<p>Example of online repo: <a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024">OndrejMottl/VersionControl_DataStewards_Sep2024</a></p>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">GH Desktop</a></li>
-<li><a href="#tabset-2-2">Command line</a></li>
-<li><a href="#tabset-2-3">RStudio</a></li>
-<li><a href="#tabset-2-4">VS Code</a></li>
+<p class="p2"><span class="s1">Create new project with git tracking</span></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">For existing project</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> init</span></p>
+<p class="p2"><span class="s1">Create new project with git tracking</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> init </span><span class="s12">&lt;</span><span class="s11">DIRECTORY</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">For existing project</span></p>
+<p class="p12"><span class="s11">usethis::<a href="https://usethis.r-lib.org/reference/use_git.html"><span class="s13">use_git</span></a></span><span class="s12">()</span></p>
+<p class="p2"><span class="s1">Create new project with git tracking</span></p>
+<p class="p13"><span class="s14">usethis::<a href="https://usethis.r-lib.org/reference/create_package.html"><span class="s13">create_project</span></a></span><span class="s15">(</span><span class="s16">"&lt;DIRECTORY&gt;"</span><span class="s15">)</span></p>
+<p class="p14"><span class="s1"># switch to the new project</span></p>
+<p class="p12"><span class="s11">usethis::<a href="https://usethis.r-lib.org/reference/use_git.html"><span class="s13">use_git</span></a></span><span class="s12">()</span></p>
+<p class="p2"><span class="s1">Git integration is automatic in Source control panel</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s2"><a href="https://www.sqlshack.com/visual-studio-code-vs-code-integration-with-git-source-control/">SQLShack</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">Make a new project with Git tracking</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">03:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Git clone (repo first)</b></span></h2>
+<p class="p2"><span class="s1">Copy (download) for remote repo to local machine</span></p>
+<p class="p4"><span class="s8">Example of online repo: <a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024"><span class="s9">OndrejMottl/VersionControl_DataStewards_Sep2024</span></a></span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-2-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>OWNER<span class="op">&gt;</span>/<span class="op">&lt;</span>REPO<span class="op">&gt;</span>.git <span class="op">&lt;</span>DIRECTORY<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-2-3">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_from_github.html">create_from_github</a></span><span class="op">(</span></span>
-<span>  repo_spec <span class="op">=</span> <span class="st">"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</span>,</span>
-<span>  destdir <span class="op">=</span> <span class="st">"&lt;DIRECTORY&gt;"</span>,</span>
-<span>  fork <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-2-4">
-<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
-<p>Paste in URL: <code>"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</code></p>
-</div>
-</div>
-</div>
-</section><section id="practical-exercise-2" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<p>clone a repo (e.g.&nbsp;<a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024">this one</a>)</p>
-</div>
-<p></p>
-<div class="countdown" id="timer_f34f31ad" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="a-commit" class="slide level2"><h2>a commit</h2>
-<p>A <span class="text-color-highlight-primary"><strong>commit</strong></span> is a <span class="text-color-highlight-secondary">record</span> of a change</p>
-<p>If you create or edit a file in your repository and save the changes, you need to <span class="text-color-highlight-secondary">record</span> your change via a <span class="text-color-highlight-primary"><strong>commit</strong></span></p>
-<div class="fragment">
-<!-- -->
-<h3 id="chess-analogy">Chess analogy?</h3>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.wikihow.com/images/thumb/0/06/Play-Chess-Step-28-Version-5.jpg/aid54279-v4-728px-Play-Chess-Step-28-Version-5.jpg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<p><strong>Chess move diary</strong>:</p>
-<ul>
-<li>Bc4 (Bishop to c4)</li>
-<li>Nf3 (Knight to f3)</li>
-<li>Qc7 (Queen to c7)</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> clone https://github.com/</span><span class="s12">&lt;</span><span class="s11">OWNER</span><span class="s12">&gt;</span><span class="s11">/</span><span class="s12">&lt;</span><span class="s11">REPO</span><span class="s12">&gt;</span><span class="s11">.git </span><span class="s12">&lt;</span><span class="s11">DIRECTORY</span><span class="s12">&gt;</span></p>
+<p class="p13"><span class="s14">usethis::<a href="https://usethis.r-lib.org/reference/create_from_github.html"><span class="s13">create_from_github</span></a></span><span class="s15">(</span></p>
+<p class="p15"><span class="s17"><span class="Apple-converted-space">  </span>repo_spec </span><span class="s15">=</span><span class="s17"> </span><span class="s1">"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</span><span class="s17">,</span></p>
+<p class="p15"><span class="s17"><span class="Apple-converted-space">  </span>destdir </span><span class="s15">=</span><span class="s17"> </span><span class="s1">"&lt;DIRECTORY&gt;"</span><span class="s17">,</span></p>
+<p class="p16"><span class="s1"><span class="Apple-converted-space">  </span>fork </span><span class="s15">=</span><span class="s1"> </span><span class="s18">FALSE</span></p>
+<p class="p7"><span class="s11"><span class="Apple-converted-space">  </span></span><span class="s12">)</span></p>
+<p class="p2"><span class="s1">Open Command Palette (</span><span class="s19">Ctrl+Shift+p</span><span class="s1">)</span></p>
+<p class="p17"><span class="s20">Paste in URL: </span><span class="s1">"https://github.com/&lt;OWNER&gt;/&lt;REPO&gt;.git"</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">clone a repo (e.g. <a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024"><span class="s7">this one</span></a>)</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>a commit</b></span></h2>
+<p class="p2"><span class="s1">A <b>commit</b> is a record of a change</span></p>
+<p class="p2"><span class="s1">If you create or edit a file in your repository and save the changes, you need to record your change via a <b>commit</b></span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Chess analogy?</b></span></h3>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><b>Chess move diary</b>:</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">Bc4 (Bishop to c4)</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Nf3 (Knight to f3)</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Qc7 (Queen to c7)</span></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://www.wikihow.com/Play-Chess">wikiHow: How to Play Chess?</a></p>
-</div>
-</section><section id="a-commit-1" class="slide level2"><h2>a commit</h2>
-<div class="columns">
-<div class="column textcenter" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.wikihow.com/images/thumb/c/c3/Play-Chess-Step-24-Version-5.jpg/aid54279-v4-728px-Play-Chess-Step-24-Version-5.jpg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><em>Pawn to d4</em></p>
-</div>
-<div class="column textcenter fragment" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/git01.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><em>Edit line 32 of file A</em></p>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://www.wikihow.com/Play-Chess">wikiHow: How to Play Chess?</a></p>
-</div>
-</section><section id="a-commit-2" class="slide level2"><h2>a commit</h2>
-<p><br><br></p>
-
-<img data-src="materials/git02.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="states-of-a-file" class="slide level2"><h2>3 states of a file</h2>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:29%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://git-scm.com/images/about/index1@2x.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="column fragment" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://i0.wp.com/jessitron.com/wp-content/uploads/2012/12/27eb8-screenshot2012-12-09at2.07.55pm.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://git-scm.com/">git—everything-is-local</a></p>
-<p><a href="https://jessitron.com/2012/12/09/git-the-many-parts-five-categories-of-files/">jessitron</a></p>
-</div>
-</section><section id="staging-changes" class="slide level2"><h2>Staging changes</h2>
-<p>Make a change to a file and save it. Now <em>stage</em> the change:</p>
-<div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">GH Desktop</a></li>
-<li><a href="#tabset-3-2">Command line</a></li>
-<li><a href="#tabset-3-3">RStudio</a></li>
-<li><a href="#tabset-3-4">VS Code</a></li>
+<p class="p4"><span class="s2"><a href="https://www.wikihow.com/Play-Chess">wikiHow: How to Play Chess?</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>a commit</b></span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><i>Pawn to d4</i></span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><i>Edit line 32 of file A</i></span></p>
+<p class="p4"><span class="s2"><a href="https://www.wikihow.com/Play-Chess">wikiHow: How to Play Chess?</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>a commit</b></span></h2>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>3 states of a file</b></span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s2"><a href="https://git-scm.com/">git—everything-is-local</a></span></p>
+<p class="p4"><span class="s2"><a href="https://jessitron.com/2012/12/09/git-the-many-parts-five-categories-of-files/">jessitron</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Staging changes</b></span></h2>
+<p class="p2"><span class="s1">Make a change to a file and save it. Now <i>stage</i> the change:</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-3-1">
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<ul>
-<li>The red icon indicates removed files.</li>
-<li>The yellow icon indicates modified files.</li>
-<li>The green icon indicates added files.</li>
+<p class="p5"><span class="s1"></span><br></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">The red icon indicates removed files.</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">The yellow icon indicates modified files.</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">The green icon indicates added files.</span></li>
 </ul>
-</div>
-</div>
-</div>
-<div id="tabset-3-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>FILE<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-3-3">
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://annakrystalli.me/talks/assets/git_tab.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<ul>
-<li>two yellow <code>??</code> indicates adding a file</li>
-<li>a blue <code>M</code> indicates edit a file that has already been committed</li>
-<li>a red <code>D</code> indicates deleting a file</li>
+<p class="p7"><span class="s10">git</span><span class="s11"> add </span><span class="s12">&lt;</span><span class="s11">FILE</span><span class="s12">&gt;</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">two yellow </span><span class="s19">??</span><span class="s1"> indicates adding a file</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">a blue </span><span class="s19">M</span><span class="s1"> indicates edit a file that has already been committed</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">a red </span><span class="s19">D</span><span class="s1"> indicates deleting a file</span></li>
 </ul>
-</div>
-</div>
-</div>
-<div id="tabset-3-4">
-<div class="columns">
-<div class="column" style="width:20%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/overview/stage-changes.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:20%;">
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="practical-exercise-3" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<ol type="1">
-<li>Make changes to a file</li>
-<li>Make a new file</li>
-<li>Stage the changes</li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">Make changes to a file</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Make a new file</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Stage the changes</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_786a313f" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="a-first-commit" class="slide level2"><h2>a first commit</h2>
-<p>Commit (record) <em>staged</em> changes:</p>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">GH Desktop</a></li>
-<li><a href="#tabset-4-2">Command line</a></li>
-<li><a href="#tabset-4-3">RStudio</a></li>
-<li><a href="#tabset-4-4">VS Code</a></li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>a first commit</b></span></h2>
+<p class="p2"><span class="s1">Commit (record) <i>staged</i> changes:</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-4-1">
-<div class="columns">
-<div class="column" style="width:20%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://user-images.githubusercontent.com/359239/43204294-df0e02b8-8ff6-11e8-9a6d-e1ceb6e460e2.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:20%;">
-
-</div>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">"commit message"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-4-3">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/19_commit_window.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-4">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-staging.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="review-history" class="slide level2"><h2>Review history</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:40%;">
-<h3 id="dissecting-a-commit">Dissecting a commit</h3>
-<p><strong>SHA</strong> - unique identifier</p>
-<p><strong>Author</strong> - who has done this?</p>
-<p><strong>Date</strong> - when was this done?</p>
-<p><strong>Message</strong> - description of what has been done</p>
-<p><strong>Stats</strong> - what has changed?</p>
-</div>
-</div>
-</section><section id="practical-exercise-4" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<ol type="1">
-<li>commit some changes</li>
-<li>review history</li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p18"><span class="s10">git</span><span class="s21"> commit </span><span class="s22">-am</span><span class="s21"> </span><span class="s11">"commit message"</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Review history</b></span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Dissecting a commit</b></span></h3>
+<p class="p2"><span class="s1"><b>SHA</b> - unique identifier</span></p>
+<p class="p2"><span class="s1"><b>Author</b> - who has done this?</span></p>
+<p class="p2"><span class="s1"><b>Date</b> - when was this done?</span></p>
+<p class="p2"><span class="s1"><b>Message</b> - description of what has been done</span></p>
+<p class="p2"><span class="s1"><b>Stats</b> - what has changed?</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">commit some changes</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">review history</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_f8c04e09" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="commit-message" class="slide level2"><h2>Commit message</h2>
-<p>Commits are <strong>quick</strong> and <strong>cheap</strong>. Therefore:</p>
-<ol type="1">
-<li>commit <span class="text-color-highlight-primary"><strong>often</strong> (!)</span>
-</li>
-<li>provide <span class="text-color-highlight-secondary"><strong>useful</strong></span> commit messages.</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Commit message</b></span></h2>
+<p class="p2"><span class="s1">Commits are <b>quick</b> and <b>cheap</b>. Therefore:</span></p>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">commit <b>often</b> (!)</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">provide <b>useful</b> commit messages.</span></li>
 </ol>
-<div class="columns">
-<div class="column" style="width:20%;">
-
-</div>
-<div class="column fragment" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/20_git_commit.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:20%;">
-
-</div>
-</div>
-</section><section id="commit-history" class="slide level2"><h2>Commit history</h2>
-
-<img data-src="https://happygitwithr.com/img/commit-diff-sha-tag.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a></p>
-</div>
-</section><section id="remote" class="slide level2"><h2>remote</h2>
-
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/0_workflow_git.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="remote-1" class="slide level2"><h2>remote</h2>
-<p>Now we need to <em>sync</em> chnages with the <span class="text-color-highlight-primary">remote</span> using <span class="text-color-highlight-secondary"><strong>PUSH</strong></span></p>
-<div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-5-1">GH Desktop</a></li>
-<li><a href="#tabset-5-2">Command line</a></li>
-<li><a href="#tabset-5-3">RStudio</a></li>
-<li><a href="#tabset-5-4">VS Code</a></li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Commit history</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>remote</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>remote</b></span></h2>
+<p class="p2"><span class="s1">Now we need to <i>sync</i> chnages with the remote using <b>PUSH</b></span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-5-1">
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-2">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/<span class="op">&lt;</span>OWNER<span class="op">&gt;</span>/<span class="op">&lt;</span>REPO<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-5-3">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github.html">use_github</a></span><span class="op">(</span>protocol  <span class="op">=</span> <span class="st">"https"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/21_push.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-4">
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Add a remote to existing local repo (only once):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/remote-repo.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:40%;">
-<p>Push local to remote (GitHub):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/sync.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="practical-exercise-5" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<ol type="1">
-<li>Publish repo to GitHub</li>
-<li>make new commit(s)</li>
-<li>Push changes to remote</li>
+<p class="p2"><span class="s1">Add a remote to existing local repo (only once):</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Push local to remote (GitHub):</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Add a remote to existing local repo (only once):</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> remote add origin https://github.com/</span><span class="s12">&lt;</span><span class="s11">OWNER</span><span class="s12">&gt;</span><span class="s11">/</span><span class="s12">&lt;</span><span class="s11">REPO</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">Push local to remote (GitHub):</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> push</span></p>
+<p class="p2"><span class="s1">Add a remote to existing local repo (only once):</span></p>
+<p class="p7"><span class="s10">usethis::<a href="https://usethis.r-lib.org/reference/use_github.html"><span class="s13">use_github</span></a></span><span class="s12">(</span><span class="s11">protocol<span class="Apple-converted-space">  </span></span><span class="s12">=</span><span class="s11"> </span><span class="s23">"https"</span><span class="s12">)</span></p>
+<p class="p2"><span class="s1">Push local to remote (GitHub):</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Add a remote to existing local repo (only once):</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Push local to remote (GitHub):</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">Publish repo to GitHub</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">make new commit(s)</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Push changes to remote</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_8af79a77" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="github-intermezzo" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">GitHub intermezzo</span></h2>
-</section><section id="a-github-repo" class="slide level2"><h2>A GitHub repo</h2>
-
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/10_new_repo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="github-creating-a-repo" class="slide level2"><h2>GitHub creating a repo</h2>
-
-<img data-src="materials/01_new_button.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="github-creating-a-repo-1" class="slide level2"><h2>GitHub creating a repo</h2>
-
-<img data-src="materials/03_owner.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="github-creating-a-repo-2" class="slide level2"><h2>GitHub creating a repo</h2>
-
-<img data-src="materials/04_name.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="github-creating-a-repo-3" class="slide level2"><h2>GitHub creating a repo</h2>
-
-<img data-src="materials/05_visibility.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="github-creating-a-repo-4" class="slide level2"><h2>GitHub creating a repo</h2>
-<p><strong>README</strong> - description of the project</p>
-<p><strong>.gitignore</strong> - list of files ignored by GitHub (more about it later)</p>
-<p><strong>license</strong> - tell other what they can do wit your code</p>
-
-<img data-src="materials/06_readme.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="a-note-on-usethis" class="slide level2"><h2>A note on {usethis}</h2>
-<p><a href="https://usethis.r-lib.org/index.html">{usethis} package</a> provide a lot of usefull helpers</p>
-<ul>
-<li>
-<strong>README</strong> - description of the project</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub intermezzo</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>A GitHub repo</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub creating a repo</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub creating a repo</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub creating a repo</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub creating a repo</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub creating a repo</b></span></h2>
+<p class="p2"><span class="s1"><b>README</b> - description of the project</span></p>
+<p class="p2"><span class="s1"><b>.gitignore</b> - list of files ignored by GitHub (more about it later)</span></p>
+<p class="p2"><span class="s1"><b>license</b> - tell other what they can do wit your code</span></p>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>A note on {usethis}</b></span></h2>
+<p class="p2"><span class="s13"><a href="https://usethis.r-lib.org/index.html">{usethis} package</a></span><span class="s1"> provide a lot of usefull helpers</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"><b></b></span><span class="s1"><b>README</b> - description of the project</span></li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_readme_rmd.html">use_readme_md</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>
-<strong>LICENSE</strong> - restict the use of your code</li>
+<p class="p19"><span class="s10">usethis::<a href="https://usethis.r-lib.org/reference/use_readme_rmd.html"><span class="s13">use_readme_md</span></a></span><span class="s12">()</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"><b></b></span><span class="s1"><b>LICENSE</b> - restict the use of your code</span></li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/licenses.html">use_mit_license</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Ondřej Mottl"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>
-<strong>CONTRIBUTING.md</strong> - guidelines for contributors</li>
+<p class="p19"><span class="s10">usethis::<a href="https://usethis.r-lib.org/reference/licenses.html"><span class="s13">use_mit_license</span></a></span><span class="s12">(</span><span class="s21">name </span><span class="s12">=</span><span class="s21"> </span><span class="s23">"Ondřej Mottl"</span><span class="s12">)</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"><b></b></span><span class="s1"><b>CONTRIBUTING.md</b> - guidelines for contributors</span></li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/tidyverse.html">use_tidy_contributing</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>
-<strong>CODE_OF_CONDUCT.md</strong> - set the tone for discourse between contributors</li>
+<p class="p19"><span class="s10">usethis::<a href="https://usethis.r-lib.org/reference/tidyverse.html"><span class="s13">use_tidy_contributing</span></a></span><span class="s12">()</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"><b></b></span><span class="s1"><b>CODE_OF_CONDUCT.md</b> - set the tone for discourse between contributors</span></li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_code_of_conduct.html">use_code_of_conduct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="github-creating-a-repo-5" class="slide level2"><h2>GitHub creating a repo</h2>
-
-<img data-src="materials/07_final_click.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="practical-exercise-6" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<p>Create a new repo on GitHub</p>
-</div>
-<p></p>
-<div class="countdown" id="timer_87413583" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="gitignore-file" class="slide level2"><h2>
-<code>.gitignore</code> file</h2>
-<p>A guide to the <span class="text-color-highlight-primary">git</span> which files <span class="text-color-highlight-secondary"><strong>should be ignored for detecting changes</strong></span></p>
-<p>Here is an example of a <strong>.gitignore</strong> file:</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href=""></a><span class="co"># History files</span></span>
-<span id="cb16-2"><a href=""></a><span class="ex">.Rhistory</span></span>
-<span id="cb16-3"><a href=""></a><span class="ex">.Rapp.history</span></span>
-<span id="cb16-4"><a href=""></a></span>
-<span id="cb16-5"><a href=""></a><span class="co"># Session Data files</span></span>
-<span id="cb16-6"><a href=""></a><span class="ex">.RData</span></span>
-<span id="cb16-7"><a href=""></a></span>
-<span id="cb16-8"><a href=""></a><span class="co"># RStudio files</span></span>
-<span id="cb16-9"><a href=""></a><span class="ex">.Rproj.user/</span></span>
-<span id="cb16-10"><a href=""></a></span>
-<span id="cb16-11"><a href=""></a><span class="co"># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3</span></span>
-<span id="cb16-12"><a href=""></a><span class="ex">.httr-oauth</span></span>
-<span id="cb16-13"><a href=""></a><span class="ex">.Rproj.user</span></span>
-<span id="cb16-14"><a href=""></a></span>
-<span id="cb16-15"><a href=""></a><span class="co">#data (excludes everything in the folder data)</span></span>
-<span id="cb16-16"><a href=""></a><span class="ex">data/*</span></span>
-<span id="cb16-17"><a href=""></a></span>
-<span id="cb16-18"><a href=""></a><span class="co"># you can make exceptions for specific files</span></span>
-<span id="cb16-19"><a href=""></a><span class="ex">!data/dragon_taxonomy.csv</span></span>
-<span id="cb16-20"><a href=""></a></span>
-<span id="cb16-21"><a href=""></a><span class="co">#figures &amp; output (excludes all figure files)</span></span>
-<span id="cb16-22"><a href=""></a><span class="ex">*.png</span></span>
-<span id="cb16-23"><a href=""></a><span class="ex">*.pdf</span></span>
-<span id="cb16-24"><a href=""></a><span class="ex">*.jpeg</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="update-local--pull" class="slide level2"><h2>update local- PULL</h2>
-
-<img data-src="https://sfdctechie.wordpress.com/wp-content/uploads/2019/12/github.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://sfdctechie.wordpress.com/2019/12/27/how-to-add-a-salesforce-dx-project-to-source-control-step-by-step-guide/">sfdc techie – Pavan’s blog</a></p>
-</div>
-</section><section id="update-local--pull-1" class="slide level2"><h2>update local- PULL</h2>
-
-<img data-src="https://biostats-r.github.io/biostats/github/Pics/gittutorial/22_workflow2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></p>
-</div>
-</section><section id="update-local--pull-2" class="slide level2"><h2>update local- PULL</h2>
-<p>Now we need to <em>sync</em> chnages from the <span class="text-color-highlight-secondary">remote</span> to <span class="text-color-highlight-tertiary">local</span> the using <span class="text-color-highlight-primary"><strong>PULL</strong></span></p>
-<div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-6-1">GH Desktop</a></li>
-<li><a href="#tabset-6-2">Command line</a></li>
-<li><a href="#tabset-6-3">RStudio</a></li>
-<li><a href="#tabset-6-4">VS Code</a></li>
+<p class="p19"><span class="s10">usethis::<a href="https://usethis.r-lib.org/reference/use_code_of_conduct.html"><span class="s13">use_code_of_conduct</span></a></span><span class="s12">()</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>GitHub creating a repo</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">Create a new repo on GitHub</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 19.5px Menlo; -webkit-text-stroke: #000000"><span class="s1"><b>.gitignore</b></span><span class="s24"><b> file</b></span></h2>
+<p class="p2"><span class="s1">A guide to the git which files <b>should be ignored for detecting changes</b></span></p>
+<p class="p2"><span class="s1">Here is an example of a <b>.gitignore</b> file:</span></p>
+<p class="p14"><span class="s1"># History files</span></p>
+<p class="p16"><span class="s1">.Rhistory</span></p>
+<p class="p16"><span class="s1">.Rapp.history</span></p>
+<p class="p21"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1"># Session Data files</span></p>
+<p class="p16"><span class="s1">.RData</span></p>
+<p class="p21"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1"># RStudio files</span></p>
+<p class="p16"><span class="s1">.Rproj.user/</span></p>
+<p class="p21"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1"># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3</span></p>
+<p class="p16"><span class="s1">.httr-oauth</span></p>
+<p class="p16"><span class="s1">.Rproj.user</span></p>
+<p class="p21"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1">#data (excludes everything in the folder data)</span></p>
+<p class="p16"><span class="s1">data/*</span></p>
+<p class="p21"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1"># you can make exceptions for specific files</span></p>
+<p class="p16"><span class="s1">!data/dragon_taxonomy.csv</span></p>
+<p class="p21"><span class="s1"></span><br></p>
+<p class="p14"><span class="s1">#figures &amp; output (excludes all figure files)</span></p>
+<p class="p16"><span class="s1">*.png</span></p>
+<p class="p16"><span class="s1">*.pdf</span></p>
+<p class="p7"><span class="s11">*.jpeg</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>update local- PULL</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://sfdctechie.wordpress.com/2019/12/27/how-to-add-a-salesforce-dx-project-to-source-control-step-by-step-guide/">sfdc techie – Pavan’s blog</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>update local- PULL</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>update local- PULL</b></span></h2>
+<p class="p2"><span class="s1">Now we need to <i>sync</i> chnages from the remote to local the using <b>PULL</b></span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-6-1">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:70%;">
-<p>Pull from remote (GitHub) to local</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-6-2">
-<p>Pull from remote (GitHub) to local:</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-6-3">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:70%;">
-<p>Pull from remote (GitHub) to local</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://annakrystalli.me/talks/assets/git_tab.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-6-4">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:70%;">
-<p>Pull from remote (GitHub) to local</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/vscode_sync.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="merge-conflict" class="slide level2"><h2>Merge conflict 💩💩💩</h2>
-
-<img data-src="https://www.simplilearn.com/ice9/free_resources_article_thumb/pull-push.JPG" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p>A <span class="text-color-highlight-primary">merge conflict</span> can occur when you are changing the <span class="text-color-highlight-secondary">same line</span> in one file <a href=".text-color-highlight-tertiary">differently</a>.</p>
-<div class="footer">
-<p><a href="https://www.simplilearn.com/tutorials/git-tutorial/merge-conflicts-in-git">https://www.simplilearn.com/</a></p>
-</div>
-</section><section id="merge-conflict-1" class="slide level2"><h2>Merge conflict 💩💩💩</h2>
-<p><br></p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> https://github.com/picardis/myrepo.git</span>
-<span id="cb18-2"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ot">! </span><span class="ex">[rejected]</span>        master <span class="at">-</span><span class="op">&gt;</span> master <span class="er">(</span><span class="ex">fetch</span> first<span class="kw">)</span></span>
-<span id="cb18-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">error:</span> failed to push some refs to <span class="st">'https://github.com/picardis/myrepo.git'</span></span>
-<span id="cb18-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> Updates were rejected because the remote contains work that you do</span>
-<span id="cb18-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> not have locally. This is usually caused by another repository pushing</span>
-<span id="cb18-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> to the same ref. You may want to first integrate the remote changes</span>
-<span id="cb18-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> <span class="er">(</span><span class="ex">e.g.,</span> <span class="st">'git pull ...'</span><span class="kw">)</span> <span class="ex">before</span> pushing again.</span>
-<span id="cb18-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> See the <span class="st">'Note about fast-forwards'</span> in <span class="st">'git push --help'</span> for details.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="columns">
-<div class="column fragment" style="width:50%;">
-<p>a good strategy to avoid such conflicts:</p>
-<ul>
-<li>Commit often</li>
-<li>Work in small steps</li>
-<li>Push and pull regularly</li>
-<li>Organize your code in small modules (scripts)</li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Pull from remote (GitHub) to local</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Pull from remote (GitHub) to local:</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> pull</span></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Pull from remote (GitHub) to local</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Pull from remote (GitHub) to local</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merge conflict </b></span><span class="s3">💩💩💩</span></h2>
+<p class="p2"><span class="s1">A merge conflict can occur when you are changing the same line in one file <a href="file:///Users/elzica/Desktop/VersionControl_DataStewards_Sep2024/.text-color-highlight-tertiary"><span class="s7">differently</span></a>.</span></p>
+<p class="p4"><span class="s2"><a href="https://www.simplilearn.com/tutorials/git-tutorial/merge-conflicts-in-git">https://www.simplilearn.com/</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merge conflict </b></span><span class="s3">💩💩💩</span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p16"><span class="s1">To https://github.com/picardis/myrepo.git</span></p>
+<p class="p16"><span class="s1"><span class="Apple-converted-space"> </span>! [rejected]<span class="Apple-converted-space">        </span>master </span><span class="s25">-</span><span class="s15">&gt;</span><span class="s1"> master </span><span class="s26">(</span><span class="s1">fetch first)</span></p>
+<p class="p15"><span class="s17">error: failed to push some refs to </span><span class="s1">'https://github.com/picardis/myrepo.git'</span></p>
+<p class="p16"><span class="s1">hint: Updates were rejected because the remote contains work that you do</span></p>
+<p class="p16"><span class="s1">hint: not have locally. This is usually caused by another repository pushing</span></p>
+<p class="p16"><span class="s1">hint: to the same ref. You may want to first integrate the remote changes</span></p>
+<p class="p16"><span class="s1">hint: </span><span class="s26">(</span><span class="s1">e.g., </span><span class="s16">'git pull ...'</span><span class="s1">) before pushing again.</span></p>
+<p class="p18"><span class="s21">hint: See the </span><span class="s11">'Note about fast-forwards'</span><span class="s21"> in </span><span class="s11">'git push --help'</span><span class="s21"> for details.</span></p>
+<p class="p2"><span class="s1">a good strategy to avoid such conflicts:</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">Commit often</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Work in small steps</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Push and pull regularly</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Organize your code in small modules (scripts)</span></li>
 </ul>
-</div>
-<div class="column fragment" style="width:50%;">
-<p><br></p>
-<p>Merge conflicts cannot always be avoided (but can be mitigated by <em>branches</em>; later).</p>
-</div>
-</div>
-</section><section id="merge-conflict-2" class="slide level2"><h2>Merge conflict 💩💩💩</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">If</span> you have questions, please</span>
-<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt; HEAD</span></span>
-<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">open an issue</span></span>
-<span id="cb19-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">=======</span></span>
-<span id="cb19-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">ask your question in IRC.</span></span>
-<span id="cb19-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="st">&gt;&gt;&gt;&gt;&gt; branch-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>Delete the unwanted text (including the <em>decorations</em>)</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">If</span> you have questions, please</span>
-<span id="cb20-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">ask</span> your question in IRC.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Then <strong>save the file</strong>, <strong>stage</strong>, and <strong>commit</strong> again</p>
-</div>
-</section><section id="practical-exercise-7" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<p>In pairs:</p>
-<div class="r-fit-text">
-<ol type="1">
-<li>Clone someone’s else repo</li>
-<li>Add them as a collaborator</li>
-<li>Create a merge conflict</li>
-<li>fix it</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Merge conflicts cannot always be avoided (but can be mitigated by <i>branches</i>; later).</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merge conflict </b></span><span class="s3">💩💩💩</span></h2>
+<p class="p16"><span class="s1">If you have questions, please</span></p>
+<p class="p14"><span class="s1">&lt;&lt;&lt;&lt;&lt; HEAD</span></p>
+<p class="p15"><span class="s1">open an issue</span></p>
+<p class="p15"><span class="s1">=======</span></p>
+<p class="p15"><span class="s1">ask your question in IRC.</span></p>
+<p class="p18"><span class="s11">&gt;&gt;&gt;&gt;&gt; branch-a</span></p>
+<p class="p2"><span class="s1">Delete the unwanted text (including the <i>decorations</i>)</span></p>
+<p class="p16"><span class="s1">If you have questions, please</span></p>
+<p class="p7"><span class="s11">ask your question in IRC.</span></p>
+<p class="p2"><span class="s1">Then <b>save the file</b>, <b>stage</b>, and <b>commit</b> again</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">In pairs:</span></p>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">Clone someone’s else repo</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Add them as a collaborator</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Create a merge conflict</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">fix it</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_bccb69f3" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="ups-i-have-made-a-mistake" class="slide level2"><h2>Ups! I have made a mistake 😮</h2>
-<p>How to undo last commit?</p>
-<p><span class="text-color-highlight-primary">Variant A</span>: I commited but <strong>NOT</strong> <span class="text-color-highlight-tertiary">pushed yet</span>.</p>
-<div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-7-1">GH Desktop</a></li>
-<li><a href="#tabset-7-2">Command line</a></li>
-<li><a href="#tabset-7-3">RStudio</a></li>
-<li><a href="#tabset-7-4">VS Code</a></li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">03:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Ups! I have made a mistake </b></span><span class="s3">😮</span></h2>
+<p class="p2"><span class="s1">How to undo last commit?</span></p>
+<p class="p2"><span class="s1">Variant A: I commited but <b>NOT</b> pushed yet.</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-7-1">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:70%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-12506/mw-1440/images/help/desktop/undo-commit.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-7-2">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD@{1}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-7-3">
-<p>RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The <strong>Terminal</strong> (NOT <em>console</em>) has more commands and options and will be handy for trouble shooting.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD@{1}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-7-4">
-<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
-<p>Write <span class="text-color-highlight-tertiary">Git: Undo Last Commit</span></p>
-</div>
-</div>
-</div>
-</section><section id="ups-i-have-made-a-mistake-1" class="slide level2"><h2>Ups! I have made a mistake 😮</h2>
-<p>How to undo last commit?</p>
-<p><span class="text-color-highlight-secondary">Variant B</span>: I commited but <strong>AND</strong> <span class="text-color-highlight-tertiary">pushed already</span>.</p>
-<div class="panel-tabset">
-<ul id="tabset-8" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-8-1">GH Desktop</a></li>
-<li><a href="#tabset-8-2">Command line</a></li>
-<li><a href="#tabset-8-3">RStudio</a></li>
-<li><a href="#tabset-8-4">VS Code</a></li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> reset </span><span class="s22">--soft</span><span class="s11"> HEAD@{1}</span></p>
+<p class="p2"><span class="s1">RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The <b>Terminal</b> (NOT <i>console</i>) has more commands and options and will be handy for trouble shooting.</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> reset </span><span class="s22">--soft</span><span class="s11"> HEAD@{1}</span></p>
+<p class="p2"><span class="s1">Open Command Palette (</span><span class="s19">Ctrl+Shift+p</span><span class="s1">)</span></p>
+<p class="p2"><span class="s1">Write Git: Undo Last Commit</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Ups! I have made a mistake </b></span><span class="s3">😮</span></h2>
+<p class="p2"><span class="s1">How to undo last commit?</span></p>
+<p class="p2"><span class="s1">Variant B: I commited but <b>AND</b> pushed already.</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-8-1">
-<p>Right-click on the commit you would like to undo to and select <span class="text-color-highlight-tertiary">Revert a commit</span>.</p>
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:70%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-8-2">
-<p>Copy the <strong>SHA</strong> of the last commit</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="op">&lt;</span>SHA<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-8-3">
-<p>We need the <strong>Terminal</strong> (NOT <em>console</em>) again.</p>
-<p>Copy the <strong>SHA</strong> of the last commit</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="op">&lt;</span>SHA<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-8-4">
-<p>In the <span class="text-color-highlight-secondary">Source control</span> panel -&gt; <strong>COMMITS</strong> section -&gt; Right-click on the commit you want to revert to -&gt; Select the <span class="text-color-highlight-tertiary">Reset Current Branch to Previous Commit</span></p>
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://www.gitkraken.com/wp-content/uploads/2022/03/gitlens-revert-commit-sidebar-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="practical-exercise-8" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<p>Undo/Revert commit</p>
-</div>
-<p></p>
-<div class="countdown" id="timer_d4851a6e" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section></section><section><section id="branches" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">Branches</span></h1>
-
-</section><section id="branches-1" class="slide level2"><h2>Branches</h2>
-
-<img data-src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*T4HW6dnJQQz2c2soc4AeFQ.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://nicholas0010.medium.com/git-for-dummies-2-2-2874e625bf65">Git For Dummies</a></p>
-</div>
-</section><section id="branches-2" class="slide level2"><h2>Branches</h2>
-
-<img data-src="https://coderefinery.github.io/git-intro/_images/gophers.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://coderefinery.github.io/git-intro/commits/">coderefinery</a></p>
-</div>
-</section><section id="make-a-branch" class="slide level2"><h2>Make a branch</h2>
-<div class="panel-tabset">
-<ul id="tabset-9" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-9-1">GH Desktop</a></li>
-<li><a href="#tabset-9-2">Command line</a></li>
-<li><a href="#tabset-9-3">RStudio</a></li>
-<li><a href="#tabset-9-4">VS Code</a></li>
+<p class="p2"><span class="s1">Right-click on the commit you would like to undo to and select Revert a commit.</span></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Copy the <b>SHA</b> of the last commit</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> reset </span><span class="s22">--hard</span><span class="s11"> </span><span class="s12">&lt;</span><span class="s11">SHA</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">We need the <b>Terminal</b> (NOT <i>console</i>) again.</span></p>
+<p class="p2"><span class="s1">Copy the <b>SHA</b> of the last commit</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> reset </span><span class="s22">--hard</span><span class="s11"> </span><span class="s12">&lt;</span><span class="s11">SHA</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">In the Source control panel -&gt; <b>COMMITS</b> section -&gt; Right-click on the commit you want to revert to -&gt; Select the Reset Current Branch to Previous Commit</span></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">Undo/Revert commit</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">03:00</span></p>
+<h1 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Branches</b></span></h1>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Branches</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://nicholas0010.medium.com/git-for-dummies-2-2-2874e625bf65">Git For Dummies</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Branches</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://coderefinery.github.io/git-intro/commits/">coderefinery</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Make a branch</b></span></h2>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-9-1">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-9-2">
-<p>Copy the <strong>SHA</strong> of the last commit</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-9-3">
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/5_make_new_branch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:30%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/6_name_branch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-9-4">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-create-branch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="switching-between-branches-checkout" class="slide level2"><h2>Switching between branches (<code>checkout</code>)</h2>
-<p>The default branch is called <span class="text-color-highlight-secondary">main</span> or <span class="text-color-highlight-secondary">master</span></p>
-<p>‼️ Make sure that you have all changes commited before switching ‼️</p>
-<div class="panel-tabset">
-<ul id="tabset-10" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-10-1">GH Desktop</a></li>
-<li><a href="#tabset-10-2">Command line</a></li>
-<li><a href="#tabset-10-3">RStudio</a></li>
-<li><a href="#tabset-10-4">VS Code</a></li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Copy the <b>SHA</b> of the last commit</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> branch </span><span class="s12">&lt;</span><span class="s11">BRANCH-NAME</span><span class="s12">&gt;</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Switching between branches (</b></span><span class="s27"><b>checkout</b></span><span class="s1"><b>)</b></span></h2>
+<p class="p2"><span class="s1">The default branch is called main or master</span></p>
+<p class="p2"><span class="s4">‼️</span><span class="s1"> Make sure that you have all changes commited before switching </span><span class="s4">‼️</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-10-1">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-10-2">
-<p>Copy the <strong>SHA</strong> of the last commit</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout  <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-10-3">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:70%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/ChangeBranch.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-10-4">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:55%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://geo-jobe.com/wp-content/uploads/2022/07/CheckoutOrCreateBranch-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="practical-exercise-9" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<ol type="1">
-<li>Make a branch and switch</li>
-<li>commit changes</li>
-<li>push to remote</li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Copy the <b>SHA</b> of the last commit</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> checkout<span class="Apple-converted-space">  </span></span><span class="s12">&lt;</span><span class="s11">BRANCH-NAME</span><span class="s12">&gt;</span></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">Make a branch and switch</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">commit changes</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">push to remote</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_8eec4313" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="merging-branches" class="slide level2"><h2>Merging branches</h2>
-
-<img data-src="https://media.geeksforgeeks.org/wp-content/uploads/20230516192737/git-three-way-merging.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merging-branches-1" class="slide level2"><h2>Merging branches</h2>
-
-<img data-src="https://www.yakuter.com/wp-content/yuklemeler/1_sMJbSt3sLrC-sIsPOVRBdw.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="pull-request-pr" class="slide level2"><h2>Pull Request (PR)</h2>
-<p>Request to merge a branch</p>
-
-<img data-src="https://crunchify.com/wp-content/uploads/2017/09/Github-WorkFlow-Tips-Crunchify-Tips.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="pull-request---create" class="slide level2"><h2>Pull Request - create</h2>
-<p>After you <strong>push</strong> new branch, you should have a green button <span class="text-color-highlight-primary">Compare &amp; pull request</span></p>
-
-<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/CreatePullReq.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></p>
-</div>
-</section><section id="pull-request---components" class="slide level2"><h2>Pull Request - components</h2>
-
-<img data-src="https://www.dummies.com/wp-content/uploads/github-open-pull-request.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://www.dummies.com/article/technology/programming-web-design/general-programming-web-design/what-are-github-pull-requests-264741/">GitHub for dummies</a></p>
-</div>
-</section><section id="pull-request---overview" class="slide level2"><h2>Pull Request - Overview</h2>
-<p>Now you can <span class="text-color-highlight-primary">more commits</span>, (add <span class="text-color-highlight-secondary">Comment</span> to start discussion), or <span class="text-color-highlight-tertiary">merge</span></p>
-
-<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/Merge.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></p>
-</div>
-</section><section id="practical-exercise-10" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<ol type="1">
-<li>Create a PR</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merging branches</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merging branches</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request (PR)</b></span></h2>
+<p class="p2"><span class="s1">Request to merge a branch</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request - create</b></span></h2>
+<p class="p2"><span class="s1">After you <b>push</b> new branch, you should have a green button Compare &amp; pull request</span></p>
+<p class="p4"><span class="s2"><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request - components</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://www.dummies.com/article/technology/programming-web-design/general-programming-web-design/what-are-github-pull-requests-264741/">GitHub for dummies</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request - Overview</b></span></h2>
+<p class="p2"><span class="s1">Now you can more commits, (add Comment to start discussion), or merge</span></p>
+<p class="p4"><span class="s2"><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">Create a PR</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_1f624b21" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="note-on-markdown" class="slide level2"><h2>Note on Markdown</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>You can use <span class="text-color-highlight-primary">Markdown</span> in the description and comments</p>
-<p>More details on <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Github Docs</a></p>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/Markdown_syntax.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://arminreiter.com/resources/">https://arminreiter.com/</a></p>
-</div>
-</section><section id="pull-request---review" class="slide level2"><h2>Pull Request - review</h2>
-<p>A tool to <span class="text-color-highlight-primary">review</span> <span class="text-color-highlight-secondary">suggested</span> changes</p>
-
-<img data-src="https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://www.atlassian.com/blog/bitbucket/5-pull-request-must-haves">https://www.atlassian.com/</a></p>
-</div>
-</section><section id="collaboration" class="slide level2"><h2>Collaboration</h2>
-
-<img data-src="materials/FirstPullRequest.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
-</div>
-</section><section id="pull-request---review-1" class="slide level2"><h2>Pull Request - review</h2>
-<p>On <span class="text-color-highlight-primary">someone else’s PR</span>, you can comment on <strong>individual lines</strong> or <strong>whole files</strong></p>
-
-<img data-src="materials/5_review.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="pull-request---review-2" class="slide level2"><h2>Pull Request - review</h2>
-
-<img data-src="https://www.researchgate.net/profile/Yue-Yu-126/publication/321632407/figure/fig1/AS:569701769191424@1512838894719/Example-comments-on-GitHub_W640.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="http://dx.doi.org/10.1007/s11390-017-1783-2">What Are They Talking About? Analyzing Code Reviews in Pull-Based Development Model</a></p>
-</div>
-</section><section id="practical-exercise-11" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<ol type="1">
-<li>Make a comment on your PR</li>
-<li>Make a comment on a file in your PR</li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Note on Markdown</b></span></h2>
+<p class="p2"><span class="s1">You can use Markdown in the description and comments</span></p>
+<p class="p2"><span class="s1">More details on <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"><span class="s7">Github Docs</span></a></span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s2"><a href="https://arminreiter.com/resources/">https://arminreiter.com/</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request - review</b></span></h2>
+<p class="p2"><span class="s1">A tool to review suggested changes</span></p>
+<p class="p4"><span class="s2"><a href="https://www.atlassian.com/blog/bitbucket/5-pull-request-must-haves">https://www.atlassian.com/</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Collaboration</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request - review</b></span></h2>
+<p class="p2"><span class="s1">On someone else’s PR, you can comment on <b>individual lines</b> or <b>whole files</b></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Pull Request - review</b></span></h2>
+<p class="p4"><span class="s2"><a href="http://dx.doi.org/10.1007/s11390-017-1783-2">What Are They Talking About? Analyzing Code Reviews in Pull-Based Development Model</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<ol class="ol1">
+  <li class="li8"><span class="s6"></span><span class="s1">Make a comment on your PR</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Make a comment on a file in your PR</span></li>
 </ol>
-</div>
-<p></p>
-<div class="countdown" id="timer_b552b132" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="merging-branches-2" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">Merging branches</span></h2>
-</section><section id="merge-conflict-with-branch" class="slide level2"><h2>Merge conflict with branch 💩</h2>
-<p>Merge conflict with branches is much more pleasant😎</p>
-
-<img data-src="materials/4_merge_conflict.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merge-conflict-with-branch-1" class="slide level2"><h2>Merge conflict with branch 💩</h2>
-<p>Edit the file as needed</p>
-
-<img data-src="materials/5_conflict.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merge-conflict-with-branch-2" class="slide level2"><h2>Merge conflict with branch 💩</h2>
-<p>Commit the changes</p>
-
-<img data-src="materials/7_solved.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="merging-strategies" class="slide level2"><h2>Merging strategies</h2>
-<div class="columns">
-<div class="column" style="width:34%;">
-<p>Merge commit</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/906613c7-94fb-41a8-9c74-77895dec7f53.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="column fragment" style="width:34%;">
-<p>Squash &amp; Merge</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/fa7e8e52-7037-40f9-a1fd-3dcc916d9840.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="column fragment" style="width:30%;">
-<p>Rebase &amp; Merge</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://lukemerrett.com/content/images/2021/08/c44e8334-f187-4386-8946-d7996f883de3.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p><a href="https://lukemerrett.com/different-merge-types-in-git/">Luke Merrett</a></p>
-</div>
-</section><section id="practical-exercise-12" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<p>Merge a branch</p>
-</div>
-<p></p>
-<div class="countdown" id="timer_2c47b939" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="delete-branch" class="slide level2"><h2>Delete branch</h2>
-<p>We can delete branch directly on GitHub after merging</p>
-
-<img data-src="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/DeleteBranch.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></p>
-</div>
-</section><section id="delete-branch-1" class="slide level2"><h2>Delete branch</h2>
-<p>We can also delete branch <strong>before</strong> merging</p>
-<div class="panel-tabset">
-<ul id="tabset-11" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-11-1">GH Desktop</a></li>
-<li><a href="#tabset-11-2">Command line</a></li>
-<li><a href="#tabset-11-3">RStudio</a></li>
-<li><a href="#tabset-11-4">VS Code</a></li>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">05:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merging branches</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merge conflict with branch </b></span><span class="s3">💩</span></h2>
+<p class="p2"><span class="s1">Merge conflict with branches is much more pleasant</span><span class="s4">😎</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merge conflict with branch </b></span><span class="s3">💩</span></h2>
+<p class="p2"><span class="s1">Edit the file as needed</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merge conflict with branch </b></span><span class="s3">💩</span></h2>
+<p class="p2"><span class="s1">Commit the changes</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Merging strategies</b></span></h2>
+<p class="p2"><span class="s1">Merge commit</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Squash &amp; Merge</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Rebase &amp; Merge</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s2"><a href="https://lukemerrett.com/different-merge-types-in-git/">Luke Merrett</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">Merge a branch</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">03:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Delete branch</b></span></h2>
+<p class="p2"><span class="s1">We can delete branch directly on GitHub after merging</span></p>
+<p class="p4"><span class="s2"><a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/">Aberdeen Study Group</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Delete branch</b></span></h2>
+<p class="p2"><span class="s1">We can also delete branch <b>before</b> merging</span></p>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">GH Desktop</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Command line</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">RStudio</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">VS Code</span></li>
 </ul>
-<div class="tab-content">
-<div id="tabset-11-1">
-<div class="columns">
-<div class="column" style="width:10%;">
-
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://docs.github.com/assets/cb-28505/mw-1440/images/help/desktop/delete-branch-win.webp" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-11-2">
-<p>To delete a <span class="text-color-highlight-secondary">local</span> branch</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To delete a <span class="text-color-highlight-primary">remote</span> branch</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-11-3">
-<p>We need the <strong>Terminal</strong> (NOT <em>console</em>) again.</p>
-<p>To delete a <span class="text-color-highlight-secondary">local</span> branch</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To delete a <span class="text-color-highlight-primary">remote</span> branch</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> <span class="op">&lt;</span>BRANCH-NAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-11-4">
-<p>Open <span class="text-color-highlight-secondary">Command Palette</span> (<code>Ctrl+Shift+p</code>)</p>
-<p>Select <span class="text-color-highlight-tertiary">Git: Delete branch …</span></p>
-</div>
-</div>
-</div>
-</section><section id="practical-exercise-13" class="slide level2 exercise textcenter"><h2><span class="r-fit-text">Practical Exercise</span></h2>
-<div class="r-fit-text">
-<p>Delete a branch</p>
-</div>
-<p></p>
-<div class="countdown" id="timer_e998799a" data-update-every="1" tabindex="0" style="right:0;bottom:0;"> <div class="countdown-controls">
-<button class="countdown-bump-down">−</button><button class="countdown-bump-up">&amp;plus;</button>
-</div> <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code> </div>
-</section><section id="bonus-for-r-users" class="slide level2"><h2>Bonus for R users</h2>
-
-<img data-src="https://www.garrickadenbuie.com/blog/pull-request-flow-usethis/usethis-pr-flow-medium.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
-<p><a href="https://www.garrickadenbuie.com/blog/pull-request-flow-usethis">Pull Request Flow with usethis</a></p>
-</div>
-</section><section id="this-is-just-a-teaser" class="slide level2"><h2>This is just a teaser</h2>
-<p>GitHub has a lot of <span class="text-color-highlight-primary">features</span> and <span class="text-color-highlight-secondary">tools</span> to make your life easier:</p>
-<ul>
-<li>Project management</li>
-<li>Task management</li>
-<li>Collaboration</li>
-<li>Dissimination</li>
-<li>Automation</li>
-<li>…</li>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">To delete a local branch</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> branch </span><span class="s22">-d</span><span class="s11"> </span><span class="s12">&lt;</span><span class="s11">BRANCH-NAME</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">To delete a remote branch</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> push origin </span><span class="s22">--delete</span><span class="s11"> </span><span class="s12">&lt;</span><span class="s11">BRANCH-NAME</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">We need the <b>Terminal</b> (NOT <i>console</i>) again.</span></p>
+<p class="p2"><span class="s1">To delete a local branch</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> branch </span><span class="s22">-d</span><span class="s11"> </span><span class="s12">&lt;</span><span class="s11">BRANCH-NAME</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">To delete a remote branch</span></p>
+<p class="p7"><span class="s10">git</span><span class="s11"> push origin </span><span class="s22">--delete</span><span class="s11"> </span><span class="s12">&lt;</span><span class="s11">BRANCH-NAME</span><span class="s12">&gt;</span></p>
+<p class="p2"><span class="s1">Open Command Palette (</span><span class="s19">Ctrl+Shift+p</span><span class="s1">)</span></p>
+<p class="p2"><span class="s1">Select Git: Delete branch …</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Practical Exercise</b></span></h2>
+<p class="p2"><span class="s1">Delete a branch</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5">−&amp;plus;</span></p>
+<p class="p7"><span class="s1">03:00</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Bonus for R users</b></span></h2>
+<p class="p4"><span class="s2"><a href="https://www.garrickadenbuie.com/blog/pull-request-flow-usethis">Pull Request Flow with usethis</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>This is just a teaser</b></span></h2>
+<p class="p2"><span class="s1">GitHub has a lot of features and tools to make your life easier:</span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s1">Project management</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Task management</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Collaboration</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Dissimination</span></li>
+  <li class="li8"><span class="s6"></span><span class="s1">Automation</span></li>
+  <li class="li22"><span class="s28">…</span></li>
 </ul>
-<div class="fragment">
-<p>Maybe next time😊?</p>
-</div>
-</section></section><section><section id="outro" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">Outro</span></h1>
-
-</section><section id="this-presentation" class="slide level2 title"><h2><span class="bold r-fit-text">This presentation</span></h2>
-<div class="r-fit-text">
-<p><a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024">😸 Code on GitHub</a></p>
-<p><a href="https://ondrejmottl.github.io/VersionControl_DataStewards_Sep2024/">🖥️ Slides</a></p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://opensource.org/licenses/MIT"><img data-src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
-<figcaption>License: MIT</figcaption></figure>
-</div>
-</section><section id="about-me" class="slide level2"><h2>About me</h2>
-<div class="columns">
-<div class="column" style="width:25%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/Ondrej_Mottl-transparent-shadow.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/qr_linktree.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
-
-</div><div class="column" style="width:62%;">
-<p><span class="bold r-fit-text text-color-primary">Ondřej Mottl</span> Assistant Professor at <a href="https://cuni.cz/UK-1.html">Charles University</a> <br></p>
-<ul>
-<li>📧 Ondrej.mottl(at)gmail.com</li>
-<li>🐦 <a href="https://twitter.com/OndrejMottl"><span class="citation" data-cites="OndrejMottl">@OndrejMottl</span></a>
-</li>
-<li>🐱 <a href="https://github.com/OndrejMottl">Github</a>
-</li>
-<li>🆔 <a href="https://orcid.org/0000-0002-9796-5081">ORCID</a>
-</li>
-<li>🌐 <a href="https://ondrejmottl.github.io/">Personal webpage</a>
-</li>
-<li>🧑‍💻 <a href="https://ondrejmottl.github.io/lab/about_the_lab.html">Laboratory of Quantitative Ecology</a>
-</li>
+<p class="p2"><span class="s1">Maybe next time</span><span class="s4">😊</span><span class="s1">?</span></p>
+<h1 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Outro</b></span></h1>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>This presentation</b></span></h2>
+<p class="p4"><span class="s29"><a href="https://github.com/OndrejMottl/VersionControl_DataStewards_Sep2024">😸<span class="s30"> Code on GitHub</span></a></span></p>
+<p class="p4"><span class="s29"><a href="https://ondrejmottl.github.io/VersionControl_DataStewards_Sep2024/">🖥️<span class="s30"> Slides</span></a></span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p23"><span class="s1">License: MIT</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>About me</b></span></h2>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Ondřej Mottl Assistant Professor at <a href="https://cuni.cz/UK-1.html"><span class="s7">Charles University</span></a><span class="Apple-converted-space"> </span></span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s6"></span><span class="s4">📧</span><span class="s1"> Ondrej.mottl(at)gmail.com</span></li>
+  <li class="li11"><span class="s31"></span><span class="s32">🐦</span><span class="s8"> <a href="https://twitter.com/OndrejMottl"><span class="s9">@OndrejMottl</span></a></span></li>
+  <li class="li24"><span class="s6"></span><span class="s33">🐱</span><span class="s28"> <a href="https://github.com/OndrejMottl"><span class="s13">Github</span></a></span></li>
+  <li class="li24"><span class="s6"></span><span class="s33">🆔</span><span class="s28"> <a href="https://orcid.org/0000-0002-9796-5081"><span class="s13">ORCID</span></a></span></li>
+  <li class="li11"><span class="s31"></span><span class="s32">🌐</span><span class="s8"> <a href="https://ondrejmottl.github.io/"><span class="s9">Personal webpage</span></a></span></li>
+  <li class="li11"><span class="s31"></span><span class="s32">🧑‍💻</span><span class="s8"> <a href="https://ondrejmottl.github.io/lab/about_the_lab.html"><span class="s9">Laboratory of Quantitative Ecology</span></a></span></li>
 </ul>
-</div>
-</div>
-<div class="quarto-auto-generated-content">
-<div class="footer footer-default">
-
-</div>
-</div>
-</section></section>
-</div>
-  </div>
-
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="presentation_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="presentation_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="presentation_files/libs/revealjs/plugin/notes/notes.js"></script><script src="presentation_files/libs/revealjs/plugin/search/search.js"></script><script src="presentation_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="presentation_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': true,
-'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease",
-'autoAnimateDuration': 1,
-'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":false},
-'smaller': false,
- 
-        // Display controls in the bottom right corner
-        controls: false,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: 'c/t',
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
-        // Push each slide change to the browser history
-        history: true,
-
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: false,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: false,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        // The "normal" size of the presentation, aspect ratio will be preserved
-        // when the presentation is scaled to fit different resolutions. Can be
-        // specified using percentage units.
-        width: 1050,
-
-        height: 700,
-
-        // Factor of the display size that should remain empty around the content
-        margin: 0.1,
-
-        math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
-
-          RevealMath,
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
-      });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
-          }
-        }
-        return false;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      });
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          return note.innerHTML;
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
-          });
-        }
-      }
-    });
-    </script>
-
-
-</body></html>
+<p class="p10"><span class="s1"></span><br></p>
+</body>
+</html>
